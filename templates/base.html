@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main/css/base.css') }}">
+    <link rel="stylesheet" href="{% block css %}{% endblock %}">
+    <link rel="icon" href="{{ url_for('static', filename='main/site-icon/favicon-32x32.png') }}" type="image/png"
+          sizes="32x32">
+    {% block script %}{% endblock %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='jquery.countdown/jquery.countdown.js') }}"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+
+</head>
+<body>
+{% block body %}{% endblock %}
+<div id="footer">
+    <span>Statistics | Online 2021-2022@<br>(Все права защищены!)<br>Платформу разработал Исаев Илья</span>
+</div>
+</body>
+<script>
+    function slowScroll(id) {
+        $('html, body').animate({
+            scrollTop: $(id).offset().top //<!--Получение высоты-->
+        }, 500);
+    }
+
+    $(document).on("scroll", function () {
+        if ($(window).scrollTop() === 0) {
+            $("header").removeClass("fixed");
+        } else {
+            $("header").attr("class", "fixed");
+        }
+    });
+</script>
+<script>
+    var close = document.getElementsByClassName("closebtn");
+    var i;
+
+    for (i = 0; i < close.length; i++) {
+        close[i].onclick = function () {
+            var div = this.parentElement;
+            div.style.opacity = "0";
+            setTimeout(function () {
+                div.style.display = "none";
+            }, 600);
+        }
+    }
+</script>
+</html>
+
+
+<!-- url_for('static', filename ='css/main.css')-->

@@ -1,0 +1,3448 @@
+{% extends 'base.html' %}
+<html
+		xmlns:x="urn:schemas-microsoft-com:office:excel"
+		xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+	<meta http-equiv=Content-Type content="text/html; charset=UTF-8">
+	<meta name=ProgId content=Excel.Sheet>
+	<meta name=Generator content="Microsoft Excel 15">
+	<link rel=File-List href="CR1.files/filelist.xml">
+	<link rel="icon" href="{{ url_for('static', filename='main/site-icon/favicon-32x32.png') }}" type="image/png"
+		  sizes="32x32">
+	<title>Statistics.Contest</title>
+</head>
+
+{% block body %}
+	<!--[if !excel]>&nbsp;&nbsp;<![endif]-->
+	<!--Следующие сведения были подготовлены мастером публикации веб-страниц
+Microsoft Excel.-->
+	<!--При повторной публикации этого документа из Excel все сведения между тегами
+DIV будут заменены.-->
+	<!----------------------------->
+	<!--НАЧАЛО ФРАГМЕНТА ПУБЛИКАЦИИ МАСТЕРА ВЕБ-СТРАНИЦ EXCEL -->
+	<!----------------------------->
+
+	<style id="CR1_30705_Styles"><!--
+	table {
+		mso-displayed-decimal-separator: "\,";
+		mso-displayed-thousand-separator: " ";
+	}
+
+	.xl1530705 {
+		padding-top: 1px;
+		padding-right: 1px;
+		padding-left: 1px;
+		mso-ignore: padding;
+		color: black;
+		font-size: 11.0pt;
+		font-weight: 400;
+		font-style: normal;
+		text-decoration: none;
+		font-family: Calibri, sans-serif;
+		mso-font-charset: 204;
+		mso-number-format: General;
+		text-align: general;
+		vertical-align: bottom;
+		mso-background-source: auto;
+		mso-pattern: auto;
+		white-space: nowrap;
+	}
+
+	.xl6330705 {
+		padding-top: 1px;
+		padding-right: 1px;
+		padding-left: 1px;
+		mso-ignore: padding;
+		color: black;
+		font-size: 11.0pt;
+		font-weight: 400;
+		font-style: normal;
+		text-decoration: none;
+		font-family: Calibri, sans-serif;
+		mso-font-charset: 204;
+		mso-number-format: General;
+		text-align: center;
+		vertical-align: middle;
+		border: .5pt solid windowtext;
+		mso-background-source: auto;
+		mso-pattern: auto;
+		white-space: nowrap;
+	}
+
+	.xl6430705 {
+		padding-top: 1px;
+		padding-right: 1px;
+		padding-left: 1px;
+		mso-ignore: padding;
+		color: windowtext;
+		font-size: 10.0pt;
+		font-weight: 400;
+		font-style: normal;
+		text-decoration: none;
+		font-family: Arial, sans-serif;
+		mso-font-charset: 204;
+		mso-number-format: General;
+		text-align: center;
+		vertical-align: middle;
+		border: .5pt solid windowtext;
+		background: white;
+		mso-pattern: black none;
+		white-space: normal;
+	}
+
+	.xl6530705 {
+		padding-top: 1px;
+		padding-right: 1px;
+		padding-left: 1px;
+		mso-ignore: padding;
+		color: windowtext;
+		font-size: 10.0pt;
+		font-weight: 400;
+		font-style: normal;
+		text-decoration: none;
+		font-family: Arial, sans-serif;
+		mso-font-charset: 204;
+		mso-number-format: General;
+		text-align: center;
+		vertical-align: middle;
+		border: .5pt solid windowtext;
+		background: white;
+		mso-pattern: black none;
+		white-space: nowrap;
+	}
+
+	.xl6630705 {
+		padding-top: 1px;
+		padding-right: 1px;
+		padding-left: 1px;
+		mso-ignore: padding;
+		color: black;
+		font-size: 11.0pt;
+		font-weight: 400;
+		font-style: normal;
+		text-decoration: none;
+		font-family: Calibri, sans-serif;
+		mso-font-charset: 204;
+		mso-number-format: "dd\/mmm";
+		text-align: center;
+		vertical-align: middle;
+		border: .5pt solid windowtext;
+		mso-background-source: auto;
+		mso-pattern: auto;
+		white-space: nowrap;
+	}
+
+	.xl6730705 {
+		padding-top: 1px;
+		padding-right: 1px;
+		padding-left: 1px;
+		mso-ignore: padding;
+		color: black;
+		font-size: 11.0pt;
+		font-weight: 400;
+		font-style: normal;
+		text-decoration: none;
+		font-family: Calibri, sans-serif;
+		mso-font-charset: 204;
+		mso-number-format: General;
+		text-align: center;
+		vertical-align: middle;
+		border: .5pt solid windowtext;
+		mso-background-source: auto;
+		mso-pattern: auto;
+		white-space: normal;
+	}
+
+	.xl6830705 {
+		padding-top: 1px;
+		padding-right: 1px;
+		padding-left: 1px;
+		mso-ignore: padding;
+		color: black;
+		font-size: 11.0pt;
+		font-weight: 400;
+		font-style: normal;
+		text-decoration: none;
+		font-family: Calibri, sans-serif;
+		mso-font-charset: 204;
+		mso-number-format: General;
+		text-align: center;
+		vertical-align: middle;
+		border: .5pt solid windowtext;
+		background: #A9D08E;
+		mso-pattern: auto;
+		white-space: nowrap;
+	}
+
+	.xl6930705 {
+		padding-top: 1px;
+		padding-right: 1px;
+		padding-left: 1px;
+		mso-ignore: padding;
+		color: black;
+		font-size: 11.0pt;
+		font-weight: 400;
+		font-style: normal;
+		text-decoration: none;
+		font-family: Calibri, sans-serif;
+		mso-font-charset: 204;
+		mso-number-format: General;
+		text-align: center;
+		vertical-align: middle;
+		mso-background-source: auto;
+		mso-pattern: auto;
+		white-space: nowrap;
+	}
+
+	.xl7030705 {
+		padding-top: 1px;
+		padding-right: 1px;
+		padding-left: 1px;
+		mso-ignore: padding;
+		color: black;
+		font-size: 11.0pt;
+		font-weight: 400;
+		font-style: normal;
+		text-decoration: none;
+		font-family: Calibri, sans-serif;
+		mso-font-charset: 204;
+		mso-number-format: General;
+		text-align: center;
+		vertical-align: bottom;
+		border: .5pt solid windowtext;
+		background: #D0CECE;
+		mso-pattern: black none;
+		white-space: nowrap;
+	}
+
+	.xl7130705 {
+		padding-top: 1px;
+		padding-right: 1px;
+		padding-left: 1px;
+		mso-ignore: padding;
+		color: black;
+		font-size: 11.0pt;
+		font-weight: 400;
+		font-style: normal;
+		text-decoration: none;
+		font-family: Calibri;
+		mso-generic-font-family: auto;
+		mso-font-charset: 204;
+		mso-number-format: General;
+		text-align: center;
+		vertical-align: middle;
+		border: .5pt solid windowtext;
+		mso-background-source: auto;
+		mso-pattern: auto;
+		white-space: normal;
+	}
+
+	.xl7230705 {
+		padding-top: 1px;
+		padding-right: 1px;
+		padding-left: 1px;
+		mso-ignore: padding;
+		color: black;
+		font-size: 11.0pt;
+		font-weight: 400;
+		font-style: normal;
+		text-decoration: none;
+		font-family: Calibri, sans-serif;
+		mso-font-charset: 204;
+		mso-number-format: General;
+		text-align: center;
+		vertical-align: middle;
+		border: .5pt solid windowtext;
+		background: #D0CECE;
+		mso-pattern: black none;
+		white-space: normal;
+	}
+
+	.xl7330705 {
+		padding-top: 1px;
+		padding-right: 1px;
+		padding-left: 1px;
+		mso-ignore: padding;
+		color: black;
+		font-size: 11.0pt;
+		font-weight: 400;
+		font-style: normal;
+		text-decoration: none;
+		font-family: Calibri;
+		mso-generic-font-family: auto;
+		mso-font-charset: 204;
+		mso-number-format: General;
+		text-align: center;
+		vertical-align: middle;
+		border: .5pt solid windowtext;
+		background: #D0CECE;
+		mso-pattern: black none;
+		white-space: normal;
+	}
+
+	.xl7430705 {
+		padding-top: 1px;
+		padding-right: 1px;
+		padding-left: 1px;
+		mso-ignore: padding;
+		color: black;
+		font-size: 11.0pt;
+		font-weight: 400;
+		font-style: normal;
+		text-decoration: none;
+		font-family: Calibri, sans-serif;
+		mso-font-charset: 204;
+		mso-number-format: General;
+		text-align: center;
+		vertical-align: bottom;
+		border: .5pt solid windowtext;
+		background: #F2F2F2;
+		mso-pattern: black none;
+		white-space: nowrap;
+	}
+
+	.xl7530705 {
+		padding-top: 1px;
+		padding-right: 1px;
+		padding-left: 1px;
+		mso-ignore: padding;
+		color: black;
+		font-size: 10.0pt;
+		font-weight: 400;
+		font-style: normal;
+		text-decoration: none;
+		font-family: Arial, sans-serif;
+		mso-font-charset: 204;
+		mso-number-format: General;
+		text-align: center;
+		vertical-align: middle;
+		border: .5pt solid windowtext;
+		mso-background-source: auto;
+		mso-pattern: auto;
+		white-space: nowrap;
+	}
+
+	.xl7630705 {
+		padding-top: 1px;
+		padding-right: 1px;
+		padding-left: 1px;
+		mso-ignore: padding;
+		color: black;
+		font-size: 11.0pt;
+		font-weight: 400;
+		font-style: normal;
+		text-decoration: none;
+		font-family: Calibri, sans-serif;
+		mso-font-charset: 204;
+		mso-number-format: General;
+		text-align: center;
+		vertical-align: middle;
+		border: .5pt solid windowtext;
+		background: #F2F2F2;
+		mso-pattern: black none;
+		white-space: normal;
+	}
+
+	.xl7730705 {
+		padding-top: 1px;
+		padding-right: 1px;
+		padding-left: 1px;
+		mso-ignore: padding;
+		color: black;
+		font-size: 11.0pt;
+		font-weight: 400;
+		font-style: normal;
+		text-decoration: none;
+		font-family: Calibri, sans-serif;
+		mso-font-charset: 204;
+		mso-number-format: General;
+		text-align: center;
+		vertical-align: bottom;
+		border-top: .5pt solid windowtext;
+		border-right: none;
+		border-bottom: .5pt solid windowtext;
+		border-left: .5pt solid windowtext;
+		background: #F2F2F2;
+		mso-pattern: auto;
+		white-space: nowrap;
+	}
+
+	.xl7830705 {
+		padding-top: 1px;
+		padding-right: 1px;
+		padding-left: 1px;
+		mso-ignore: padding;
+		color: black;
+		font-size: 11.0pt;
+		font-weight: 400;
+		font-style: normal;
+		text-decoration: none;
+		font-family: Calibri, sans-serif;
+		mso-font-charset: 204;
+		mso-number-format: General;
+		text-align: center;
+		vertical-align: bottom;
+		border-top: .5pt solid windowtext;
+		border-right: none;
+		border-bottom: .5pt solid windowtext;
+		border-left: none;
+		background: #F2F2F2;
+		mso-pattern: black none;
+		white-space: nowrap;
+	}
+
+	.xl7930705 {
+		padding-top: 1px;
+		padding-right: 1px;
+		padding-left: 1px;
+		mso-ignore: padding;
+		color: black;
+		font-size: 11.0pt;
+		font-weight: 400;
+		font-style: normal;
+		text-decoration: none;
+		font-family: Calibri, sans-serif;
+		mso-font-charset: 204;
+		mso-number-format: General;
+		text-align: center;
+		vertical-align: bottom;
+		border-top: .5pt solid windowtext;
+		border-right: .5pt solid windowtext;
+		border-bottom: .5pt solid windowtext;
+		border-left: none;
+		background: #F2F2F2;
+		mso-pattern: black none;
+		white-space: nowrap;
+	}
+
+	--></style>
+	<div id="CR1_30705" align=center x:publishsource="Excel">
+
+		<h1 style='color:black;font-family:Calibri;font-size:14.0pt;font-weight:800;
+font-style:normal'>Statistics.Contest - Итоговый протокол контрольного тестирования по Python</h1>
+
+		<table border=0 cellpadding=0 cellspacing=0 width=845 style='border-collapse:
+ collapse;table-layout:fixed;width:634pt'>
+			<col width=39 style='mso-width-source:userset;mso-width-alt:1426;width:29pt'>
+			<col width=82 style='mso-width-source:userset;mso-width-alt:2998;width:62pt'>
+			<col width=187 style='mso-width-source:userset;mso-width-alt:6838;width:140pt'>
+			<col width=47 style='mso-width-source:userset;mso-width-alt:1718;width:35pt'>
+			<col width=40 span=6 style='mso-width-source:userset;mso-width-alt:1462;
+ width:30pt'>
+			<col width=156 style='mso-width-source:userset;mso-width-alt:5705;width:117pt'>
+			<col width=54 style='mso-width-source:userset;mso-width-alt:1974;width:41pt'>
+			<col width=40 style='mso-width-source:userset;mso-width-alt:1462;width:30pt'>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl7430705 width=39 style='height:15.0pt;width:29pt'>Класс</td>
+				<td class=xl7430705 width=82 style='border-left:none;width:62pt'>Вариант</td>
+				<td class=xl7430705 width=187 style='border-left:none;width:140pt'>Фамилия
+					Имя
+				</td>
+				<td class=xl7430705 width=47 style='border-left:none;width:35pt'>Статус</td>
+				<td colspan=7 class=xl7730705 width=396 style='border-right:.5pt solid black;
+  border-left:none;width:297pt'>Результат тестирования
+				</td>
+				<td class=xl7430705 width=54 style='border-left:none;width:41pt'>Оценка</td>
+				<td class=xl7430705 width=40 style='border-left:none;width:30pt'>Итог</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl7030705 style='height:15.0pt;border-top:none'>&nbsp;</td>
+				<td class=xl7030705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl7030705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl7030705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl7030705 style='border-top:none;border-left:none'>A</td>
+				<td class=xl7030705 style='border-top:none;border-left:none'>B</td>
+				<td class=xl7030705 style='border-top:none;border-left:none'>C</td>
+				<td class=xl7030705 style='border-top:none;border-left:none'>D</td>
+				<td class=xl7030705 style='border-top:none;border-left:none'>E</td>
+				<td class=xl7030705 style='border-top:none;border-left:none'>Итог</td>
+				<td class=xl7030705 style='border-top:none;border-left:none'>Комментарий</td>
+				<td class=xl7030705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl7030705 style='border-top:none;border-left:none'>&nbsp;</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Е</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373160</td>
+				<td class=xl6430705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Агапов Алексей
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Е</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373160</td>
+				<td class=xl6430705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Артамкин Ярослав
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Е</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373160</td>
+				<td class=xl6430705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Байдан Максим
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Е</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373160</td>
+				<td class=xl6430705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Бахмутова Дарья
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>100</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>100</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>100</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>300</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Проверено
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>5</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>5</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Е</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373160</td>
+				<td class=xl6530705 style='border-top:none;border-left:none'>Галашев Егор</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Е</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373160</td>
+				<td class=xl6430705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Гиоргадзе Отарий
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Е</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373160</td>
+				<td class=xl6430705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Дивеев Никита
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Е</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373160</td>
+				<td class=xl6430705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Завгородняя Дарья
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Е</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373160</td>
+				<td class=xl6430705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Исаев Роман
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>100</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>100</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>100</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>100</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>100</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>500</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Проверено
+				</td>
+				<td class=xl6630705 style='border-top:none;border-left:none'>5|5</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>5|5</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Е</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373160</td>
+				<td class=xl6530705 style='border-top:none;border-left:none'>Исаева Вероника</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Е</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373160</td>
+				<td class=xl6430705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Колошьян Глеб
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Е</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373160</td>
+				<td class=xl6430705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Кулаков Вадим
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=40 style='height:30.0pt'>
+				<td height=40 class=xl6330705 style='height:30.0pt;border-top:none'>8Е</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373160</td>
+				<td class=xl6430705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Латышков Александр
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>100</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>100</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>100</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>300</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Проверено Резерв - 1
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>5</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>5</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Е</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373160</td>
+				<td class=xl6430705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Мальков Григорий
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>100</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>100</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>200</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Проверено
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>4</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>4</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Е</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373160</td>
+				<td class=xl6530705 style='border-top:none;border-left:none'>Манторова Алина</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Е</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373160</td>
+				<td class=xl6430705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Мартынов Сергей
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=40 style='height:30.0pt'>
+				<td height=40 class=xl6330705 style='height:30.0pt;border-top:none'>8Е</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373160</td>
+				<td class=xl6430705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Ментова Наталья
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>100</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>100</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>100</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>300</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Проверено Плагиат 1 тип
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>5</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>4</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Е</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373160</td>
+				<td class=xl6430705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Назаров Данила
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Е</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373160</td>
+				<td class=xl6430705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Найдо Артём
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Е</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373160</td>
+				<td class=xl6530705 style='border-top:none;border-left:none'>Наконечный
+					Арсений
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Е</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373160</td>
+				<td class=xl6430705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Ордова Анфиса
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=40 style='height:30.0pt'>
+				<td height=40 class=xl6330705 style='height:30.0pt;border-top:none'>8Е</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373160</td>
+				<td class=xl6430705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Рэйляну Яна
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>100</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>100</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>200</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Проверено Плагиат 1,2 тип
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>4</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>3</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Е</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373160</td>
+				<td class=xl6430705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Садов Евгений
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=40 style='height:30.0pt'>
+				<td height=40 class=xl6330705 style='height:30.0pt;border-top:none'>8Е</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373160</td>
+				<td class=xl6430705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Сапронова Александра
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>100</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>100</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>200</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Проверено Плагиат 1,2 тип
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>4</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>3</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Е</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373160</td>
+				<td class=xl6530705 style='border-top:none;border-left:none'>Сафин Дамир</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>100</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>100</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>100</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>100</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>24</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>424</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Проверено
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>5|5</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>5|5</td>
+			</tr>
+			<tr height=40 style='height:30.0pt'>
+				<td height=40 class=xl6330705 style='height:30.0pt;border-top:none'>8Е</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373160</td>
+				<td class=xl6430705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Степанов Данила
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>100</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>100</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>200</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Проверено Плагиат 2 тип
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>4</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>3</td>
+			</tr>
+			<tr height=20 style='page-break-before:always;height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Е</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373160</td>
+				<td class=xl6430705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Тихонов Богдан
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Проверено
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Е</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373160</td>
+				<td class=xl6430705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Тонких Софья
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Е</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373160</td>
+				<td class=xl6430705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Трандин Никита
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Е</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373160</td>
+				<td class=xl6530705 style='border-top:none;border-left:none'>Турбина София</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>100</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>100</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>200</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Проверено
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>4</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>4</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Е</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373160</td>
+				<td class=xl6430705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Фицурин Иван
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Е</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373160</td>
+				<td class=xl6430705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Хачатрян Саргис
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Проверено
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=40 style='height:30.0pt'>
+				<td height=40 class=xl6330705 style='height:30.0pt;border-top:none'>8Е</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373160</td>
+				<td class=xl6430705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Чакир Нелли
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>100</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>100</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>200</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Проверено Плагиат 1,2 тип
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>4</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>3</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Е</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373160</td>
+				<td class=xl6430705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Чебан Алёна
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>100</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>100</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>200</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Проверено
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>4</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>4</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Е</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373160</td>
+				<td class=xl6530705 style='border-top:none;border-left:none'>Шевченко Диана</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Д</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373696</td>
+				<td class=xl6430705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Агабеков Алексей
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Д</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373696</td>
+				<td class=xl6430705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Базунова Алина
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Д</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373696</td>
+				<td class=xl6430705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Боголепов Юрий
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Д</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373696</td>
+				<td class=xl6430705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Борисова Дарья
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Д</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373696</td>
+				<td class=xl6530705 style='border-top:none;border-left:none'>Гамзатов Магомед</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Д</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373696</td>
+				<td class=xl6430705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Горбач Даниил
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Д</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373696</td>
+				<td class=xl6430705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Горохов Никита
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Д</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373696</td>
+				<td class=xl6430705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Давидова Полина
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>100</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>100</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>200</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Проверено
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>4</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>4</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Д</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373696</td>
+				<td class=xl6430705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Даренков Никита
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Д</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373696</td>
+				<td class=xl6530705 style='border-top:none;border-left:none'>Добросоцких
+					Алина
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Д</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373696</td>
+				<td class=xl6430705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Докшукина Алина
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Д</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373696</td>
+				<td class=xl6430705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Дрыга Михаил
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Д</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373696</td>
+				<td class=xl6430705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Зимин Даниил
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Д</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373696</td>
+				<td class=xl6430705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Иванова Яна
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Д</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373696</td>
+				<td class=xl6530705 style='border-top:none;border-left:none'>Камолидинова
+					Ёсуман
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Д</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373696</td>
+				<td class=xl6430705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Коротков Михаил
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Д</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373696</td>
+				<td class=xl6430705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Корсакова Анастасия
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Д</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373696</td>
+				<td class=xl6430705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Курбанова Айшат
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Д</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373696</td>
+				<td class=xl6430705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Кучма Мария
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Д</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373696</td>
+				<td class=xl6530705 style='border-top:none;border-left:none'>Кушнир Артём</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Д</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373696</td>
+				<td class=xl6430705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Лебедь Екатерина
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Д</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373696</td>
+				<td class=xl6430705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Лохин Константин
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Д</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373696</td>
+				<td class=xl6430705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Лысакова Анастасия
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='page-break-before:always;height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Д</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373696</td>
+				<td class=xl6430705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Мадатзаде Муса
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Д</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373696</td>
+				<td class=xl6530705 style='border-top:none;border-left:none'>Мезенова Софья</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Д</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373696</td>
+				<td class=xl6430705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Ниязбердыев Мердан
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Д</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373696</td>
+				<td class=xl6430705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Орехов Максим
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Д</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373696</td>
+				<td class=xl6430705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Сидыкова Мижгона
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Д</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373696</td>
+				<td class=xl6430705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Смирнова Ксения
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Д</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373696</td>
+				<td class=xl6530705 style='border-top:none;border-left:none'>Солиев Дамиржон</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Д</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373696</td>
+				<td class=xl6430705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Теленкова Елизавета
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Д</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373696</td>
+				<td class=xl6430705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Чулочи Данила
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Д</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373696</td>
+				<td class=xl6430705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Шакарьянц Георгий
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Д</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373696</td>
+				<td class=xl6430705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Шатова Светлана
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Д</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373696</td>
+				<td class=xl6530705 style='border-top:none;border-left:none'>Юрьев Максим</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Г</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373502</td>
+				<td class=xl6430705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Адамкевич Сафина
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Г</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373502</td>
+				<td class=xl6430705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Айрумян Кристина
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Г</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373502</td>
+				<td class=xl6430705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Андрющенко Мария
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Г</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373502</td>
+				<td class=xl6430705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Баженов Кирилл
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Г</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373502</td>
+				<td class=xl6530705 style='border-top:none;border-left:none'>Бальчугова Анна</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Г</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373502</td>
+				<td class=xl6430705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Бандин Никита
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Г</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373502</td>
+				<td class=xl6430705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Вартляк Наталья
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Г</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373502</td>
+				<td class=xl6430705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Виноградов Вячеслав
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Г</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373502</td>
+				<td class=xl6430705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Власов Данила
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Г</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373502</td>
+				<td class=xl6530705 style='border-top:none;border-left:none'>Глебченко
+					Владимир
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Г</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373502</td>
+				<td class=xl6430705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Гусева Марина
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Г</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373502</td>
+				<td class=xl6430705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Дмоховский Матвей
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=40 style='height:30.0pt'>
+				<td height=40 class=xl6330705 style='height:30.0pt;border-top:none'>8Г</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373502</td>
+				<td class=xl6430705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Ефремова Мария
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>100</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>100</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Проверено Плагиат 1 тип
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>3</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>3</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Г</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373502</td>
+				<td class=xl6430705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Зарубина Алиса
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Проверено
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Г</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373502</td>
+				<td class=xl6530705 style='border-top:none;border-left:none'>Иванова
+					Елизавета
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Г</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373502</td>
+				<td class=xl6430705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Илюхина Валерия
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>100</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>100</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>200</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Проверено Резерв - 1
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>4</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>4</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Г</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373502</td>
+				<td class=xl6430705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Исмагилова Вероника
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Г</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373502</td>
+				<td class=xl6430705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Кашоу Лина
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Г</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373502</td>
+				<td class=xl6430705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Кравченко Анастасия
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Проверено
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Г</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373502</td>
+				<td class=xl6530705 style='border-top:none;border-left:none'>Курзина
+					Анастасия
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='page-break-before:always;height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Г</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373502</td>
+				<td class=xl6430705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Максимова Полина
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Г</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373502</td>
+				<td class=xl6430705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Марков Матвей
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Проверено
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Г</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373502</td>
+				<td class=xl6430705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Петренко Никита
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Г</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373502</td>
+				<td class=xl6430705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Пещелёва Ксения
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Г</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373502</td>
+				<td class=xl6530705 style='border-top:none;border-left:none'>Поливина Юлия</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Г</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373502</td>
+				<td class=xl6430705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Приходько Кирилл
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Г</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373502</td>
+				<td class=xl6430705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Салимова Шораана
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Г</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373502</td>
+				<td class=xl6430705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Самбурская Светлана
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Г</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373502</td>
+				<td class=xl6430705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Снитко Дмитрий
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Г</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373502</td>
+				<td class=xl6530705 style='border-top:none;border-left:none'>Фабрин Андрей</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Г</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373502</td>
+				<td class=xl6430705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Федулов Вадим
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Г</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373502</td>
+				<td class=xl6430705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Федулова Вероника
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>100</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>100</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>100</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>100</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>24</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>424</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Проверено
+				</td>
+				<td class=xl6630705 style='border-top:none;border-left:none'>5|5</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>5|5</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Г</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373502</td>
+				<td class=xl6430705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Федулова Виктория
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Проверено
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Г</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373502</td>
+				<td class=xl6430705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Хупсергенова Самира
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=40 style='height:30.0pt'>
+				<td height=40 class=xl6330705 style='height:30.0pt;border-top:none'>8Г</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373502</td>
+				<td class=xl6530705 style='border-top:none;border-left:none'>Чакир Эвелина</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>100</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>100</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>100</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>100</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>400</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Проверено Плагиат 1 тип
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>5</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>4</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>8Г</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>373502</td>
+				<td class=xl6430705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Шароватов Владимир
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>11Б</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>374041</td>
+				<td class=xl7530705 style='border-top:none;border-left:none'>Адриановская
+					Екатерина
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>11Б</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>374041</td>
+				<td class=xl7530705 style='border-top:none;border-left:none'>Арсенов Евгений</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>11Б</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>374041</td>
+				<td class=xl7530705 style='border-top:none;border-left:none'>Арутюнян Ашот</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>11Б</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>374041</td>
+				<td class=xl7530705 style='border-top:none;border-left:none'>Бобкова Анна</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>11Б</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>374041</td>
+				<td class=xl7530705 style='border-top:none;border-left:none'>Бочарникова
+					Ольга
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>11Б</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>374041</td>
+				<td class=xl7530705 style='border-top:none;border-left:none'>Быханова Лолита</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>11Б</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>374041</td>
+				<td class=xl7530705 style='border-top:none;border-left:none'>Велигоря Артем</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>11Б</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>374041</td>
+				<td class=xl7530705 style='border-top:none;border-left:none'>Власова Виктория</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>40</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>50</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>90</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Проверено
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>11Б</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>374041</td>
+				<td class=xl7530705 style='border-top:none;border-left:none'>Ганеев Камиль</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>50</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>50</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Проверено
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>11Б</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>374041</td>
+				<td class=xl7530705 style='border-top:none;border-left:none'>Гасанова Айнур</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>40</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>40</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Проверено
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>11Б</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>374041</td>
+				<td class=xl7530705 style='border-top:none;border-left:none'>Голышева
+					Екатерина
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>11Б</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>374041</td>
+				<td class=xl7530705 style='border-top:none;border-left:none'>Двали Юрий</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>11Б</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>374041</td>
+				<td class=xl7530705 style='border-top:none;border-left:none'>Долматова
+					Екатерина
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>11Б</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>374041</td>
+				<td class=xl7530705 style='border-top:none;border-left:none'>Емельянова Дарья</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>40</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>50</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>90</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Проверено
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>11Б</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>374041</td>
+				<td class=xl7530705 style='border-top:none;border-left:none'>Задера Никита</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>11Б</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>374041</td>
+				<td class=xl7530705 style='border-top:none;border-left:none'>Илларионова
+					Любовь
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>40</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>40</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Проверено
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='page-break-before:always;height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>11Б</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>374041</td>
+				<td class=xl7530705 style='border-top:none;border-left:none'>Казимова МИЛАНА</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>11Б</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>374041</td>
+				<td class=xl7530705 style='border-top:none;border-left:none'>Каспина Ирина</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>40</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>50</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>90</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Проверено
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>11Б</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>374041</td>
+				<td class=xl7530705 style='border-top:none;border-left:none'>Ниязбердыев
+					Даянч
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>5</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>100</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>40</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>145</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Проверено
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>3</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>3</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>11Б</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>374041</td>
+				<td class=xl7530705 style='border-top:none;border-left:none'>Семикин Кирилл</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>40</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>60</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>100</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Проверено
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>3</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>3</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>11Б</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>374041</td>
+				<td class=xl7530705 style='border-top:none;border-left:none'>Серов Федор</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>11Б</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>374041</td>
+				<td class=xl7530705 style='border-top:none;border-left:none'>Скандаков Данила</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>11Б</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>374041</td>
+				<td class=xl7530705 style='border-top:none;border-left:none'>Чеботарева Мария</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>11Б</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>374041</td>
+				<td class=xl7530705 style='border-top:none;border-left:none'>Чукарова
+					Виктория
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>40</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>100</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>140</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Проверено
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>3</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>3</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>11Б</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>374041</td>
+				<td class=xl7530705 style='border-top:none;border-left:none'>Шевченко
+					Екатерина
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl6330705 style='height:15.0pt;border-top:none'>11Б</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>374041</td>
+				<td class=xl7530705 style='border-top:none;border-left:none'>Шеин Юрий</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>&nbsp;</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>0</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Нет данных
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>2</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>2</td>
+			</tr>
+			<tr height=40 style='height:30.0pt'>
+				<td height=40 class=xl6330705 style='height:30.0pt;border-top:none'>11Б</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>374041</td>
+				<td class=xl7530705 style='border-top:none;border-left:none'>Шестакова
+					Наталья
+				</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>ОК</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>100</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>100</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>100</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>100</td>
+				<td class=xl6330705 style='border-top:none;border-left:none'>24</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>424</td>
+				<td class=xl6730705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Проверено Резерв - 1
+				</td>
+				<td class=xl6630705 style='border-top:none;border-left:none'>5|5</td>
+				<td class=xl6830705 style='border-top:none;border-left:none'>5|5</td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl1530705 style='height:15.0pt'></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl1530705 style='height:15.0pt'></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl1530705 style='height:15.0pt'></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl1530705 style='height:15.0pt'></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl1530705 style='height:15.0pt'></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl1530705 style='height:15.0pt'></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl1530705 style='height:15.0pt'></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl1530705 style='height:15.0pt'></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl1530705 style='height:15.0pt'></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl1530705 style='height:15.0pt'></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl1530705 style='height:15.0pt'></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl1530705 style='height:15.0pt'></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl1530705 style='height:15.0pt'></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl1530705 style='height:15.0pt'></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl1530705 style='height:15.0pt'></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl1530705 style='height:15.0pt'></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl1530705 style='height:15.0pt'></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl1530705 style='height:15.0pt'></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl1530705 style='height:15.0pt'></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl1530705 style='height:15.0pt'></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl1530705 style='height:15.0pt'></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+			</tr>
+			<tr height=20 style='page-break-before:always;height:15.0pt'>
+				<td height=20 class=xl1530705 style='height:15.0pt'></td>
+				<td colspan=2 class=xl7630705 width=269 style='width:202pt'>Комментарий</td>
+				<td class=xl6930705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td colspan=2 class=xl7630705 width=196 style='width:147pt'>Плагиат</td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl1530705 style='height:15.0pt'></td>
+				<td class=xl7230705 width=82 style='border-top:none;width:62pt'>Тип</td>
+				<td class=xl7230705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Значение
+				</td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl7230705 width=40 style='border-top:none;width:30pt'>Тип</td>
+				<td class=xl7330705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Значение
+				</td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+			</tr>
+			<tr height=40 style='height:30.0pt'>
+				<td height=40 class=xl1530705 style='height:30.0pt'></td>
+				<td class=xl6730705 width=82 style='border-top:none;width:62pt'>Проверено</td>
+				<td class=xl6730705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Результат тестирования был получен, обработан.
+				</td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl6730705 width=40 style='border-top:none;width:30pt'>1</td>
+				<td class=xl7130705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Полное списываение.
+				</td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+			</tr>
+			<tr height=85 style='height:63.75pt'>
+				<td height=85 class=xl1530705 style='height:63.75pt'></td>
+				<td class=xl6730705 width=82 style='border-top:none;width:62pt'>Резерв</td>
+				<td class=xl6730705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Перетестирование программ из-за технических сбоев системы.
+				</td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl6730705 width=40 style='border-top:none;width:30pt'>2</td>
+				<td class=xl7130705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Не полное списывание, одинаковая структура кода, одинаковые
+					фрагменты.
+				</td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+			</tr>
+			<tr height=80 style='height:60.0pt'>
+				<td height=80 class=xl1530705 style='height:60.0pt'></td>
+				<td class=xl6730705 width=82 style='border-top:none;width:62pt'>Плагиат</td>
+				<td class=xl6730705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Обнаружен один из 3 типов схожести кода ученика с другими.
+					Сниэение итогового балла на 1.
+				</td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl6730705 width=40 style='border-top:none;width:30pt'>3</td>
+				<td class=xl7130705 width=156 style='border-top:none;border-left:none;
+  width:117pt'>Частичное списывание (30% схожести).
+				</td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+			</tr>
+			<tr height=60 style='height:45.0pt'>
+				<td height=60 class=xl1530705 style='height:45.0pt'></td>
+				<td class=xl6730705 width=82 style='border-top:none;width:62pt'>Нет данных</td>
+				<td class=xl6730705 width=187 style='border-top:none;border-left:none;
+  width:140pt'>Ученик не выполнил тестирование/не отправил ни одно
+					решение.<span style='mso-spacerun:yes'> </span></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl1530705 style='height:15.0pt'></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl1530705 style='height:15.0pt'></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl1530705 style='height:15.0pt'></td>
+				<td class=xl6930705 colspan=3>Педагог: Анисимов В.Г. __________________</td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl1530705 style='height:15.0pt'></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+			</tr>
+			<tr height=20 style='height:15.0pt'>
+				<td height=20 class=xl1530705 style='height:15.0pt'></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl6930705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+				<td class=xl1530705></td>
+			</tr>
+			<![if supportMisalignedColumns]>
+			<tr height=0 style='display:none'>
+				<td width=39 style='width:29pt'></td>
+				<td width=82 style='width:62pt'></td>
+				<td width=187 style='width:140pt'></td>
+				<td width=47 style='width:35pt'></td>
+				<td width=40 style='width:30pt'></td>
+				<td width=40 style='width:30pt'></td>
+				<td width=40 style='width:30pt'></td>
+				<td width=40 style='width:30pt'></td>
+				<td width=40 style='width:30pt'></td>
+				<td width=40 style='width:30pt'></td>
+				<td width=156 style='width:117pt'></td>
+				<td width=54 style='width:41pt'></td>
+				<td width=40 style='width:30pt'></td>
+			</tr>
+			<![endif]>
+		</table>
+
+	</div>
+
+
+	<!----------------------------->
+	<!--КОНЕЦ ФРАГМЕНТА ПУБЛИКАЦИИ МАСТЕРА ВЕБ-СТРАНИЦ EXCEL-->
+	<!----------------------------->
+{% endblock %}
+
+</html>

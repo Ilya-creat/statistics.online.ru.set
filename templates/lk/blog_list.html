@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block body %}
+    <hr>
+    <h2>Список статей</h2>
+    <ul class="list-posts">
+        {% for p in posts %}
+            <li>
+                <p class="title"><a href="{{ url_for('showPost', id_post=p.id) }}">{{ p.title }}</a></p>
+                <p class="annonce">{{ p.content[:50] }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <form action="/add_post" method="post" class="form-contact">
+        <div id="app">
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.4/vue.min.js"></script>
+            <p><label>Название статьи: </label> <input type="text" name="name" value="" requied/>
+            <p><label>Текст статьи:</label>
+            <p><input type="button" value="Добавить"/>
+        </div>
+    </form>
+
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                testVal: 'Val'
+            },
+
+            methods: {
+                updateTestVal() {
+                    this.testVal = this.testVal.replace(new RegExp('(\n){2,}', 'gim'), "\t");
+                    console.log(this.testVal)
+                }
+            }
+        })
+    </script>
+{% endblock %}

@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block css %}
+    {{ url_for('static', filename='lk/css/blogs.css') }}
+{% endblock %}
+
+{% block body %}
+    <!--Menu-->
+    <header>
+        <a href="#top" id="logo" onclick="slowScroll('#top')">
+            <span>{{ header }}</span>
+        </a>
+        <div id="about">
+            {% for key,values in header_map.items() %}
+                {% if values[0] != '/' %}
+                    <a href="#{{ values }}" title="{{ key }}" onclick="slowScroll('#{{ values }}')">{{ key }}</a>
+                {% else %}
+                    <a href="{{ values }}" title="{{ key }}">{{ key }}</a>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </header>
+    {% for cat, msg in get_flashed_messages(True) %}
+        {% if cat == 'error' %}
+            <div class="alert">
+                <span class="closebtn">×</span>
+                <strong>Ошибка!</strong> {{ msg }}
+            </div>
+        {% elif cat == 'success' %}
+            <div class="alert success">
+                <span class="closebtn">×</span>
+                <strong>Успех!</strong> {{ msg }}
+            </div>
+        {% elif cat == 'info' %}
+            <div class="alert info">
+                <span class="closebtn">×</span>
+                <strong>Оповещение.</strong> {{ msg }}
+            </div>
+        {% elif cat == 'warning' %}
+            <div class="alert warning">
+                <span class="closebtn">×</span>
+                <strong>Внимание!</strong> {{ msg }}
+            </div>
+        {% endif %}
+    {% endfor %}
+    <div class="main">
+        <div class="blog-post">
+            <div class="blog-txt">
+                <div class="title">
+                    <span>{{ ctitle }}</span>
+                </div>
+                <div class="txt">
+                    {{ post|safe }}
+                </div>
+            </div>
+        </div>
+        <span class="author-post">Автор статьи: {{ author }}, редакция от {{ timestamp }}</span>
+    </div>
+{% endblock %}

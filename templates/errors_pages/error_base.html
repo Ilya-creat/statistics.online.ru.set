@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='errors_pages/css/main.css') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+<main class='container'>
+    {% for g in range(number_error_len) %}
+        {% for i in range(15) %}
+            <span class='particle'>{{ number_error[g] }}</span>
+        {% endfor %}
+    {% endfor %}
+    <article class='content'>
+        <p><b>Statistics.Error</b></p>
+        <p><strong>{{ number_error }}</strong> - {{ text_problem }}</p>
+        <p>
+            {% for name, href in _list_.items() %}
+                <button onclick="window.location.href = '{{ href }}';">{{ name }}</button>
+            {% endfor %}
+        </p>
+    </article>
+</main>
+</body>
+</html>
+
+

@@ -1,0 +1,256 @@
+{% extends 'base.html' %}
+
+{% block css %}
+    {{ url_for('static', filename='lk/css/main.css') }}
+{% endblock %}
+
+{% block body %}
+    <!--Menu-->
+    <header>
+        <a href="#top" id="logo" onclick="slowScroll('#top')">
+            <span>{{ header }}</span>
+        </a>
+        <div id="about">
+            {% for key,values in header_map.items() %}
+                {% if values[0] != '/' %}
+                    <a href="#{{ values }}" title="{{ key }}" onclick="slowScroll('#{{ values }}')">{{ key }}</a>
+                {% else %}
+                    <a href="{{ values }}" title="{{ key }}">{{ key }}</a>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </header>
+    {% for cat, msg in get_flashed_messages(True) %}
+        {% if cat == 'error' %}
+            <div class="alert">
+                <span class="closebtn">×</span>
+                <strong>Ошибка!</strong> {{ msg }}
+            </div>
+        {% elif cat == 'success' %}
+            <div class="alert success">
+                <span class="closebtn">×</span>
+                <strong>Успех!</strong> {{ msg }}
+            </div>
+        {% elif cat == 'info' %}
+            <div class="alert info">
+                <span class="closebtn">×</span>
+                <strong>Оповещение.</strong> {{ msg }}
+            </div>
+        {% elif cat == 'warning' %}
+            <div class="alert warning">
+                <span class="closebtn">×</span>
+                <strong>Внимание!</strong> {{ msg }}
+            </div>
+        {% endif %}
+    {% endfor %}
+    <!--Main-->
+    <div id="main-one">
+        {% for type, info in warn.items() %}
+            <div class="information">
+                <center><span><strong>&#187;{{ type }}&#171;</strong></span></center>
+                <p>{{ info }}</p>
+            </div>
+        {% endfor %}
+        <h1>{{ title }}</h1>
+        <h3>{{ text }}</h3>
+        <a class="floating-button" onclick="slowScroll('#overview')">{{ text_button }}</a>
+    </div>
+
+    <div id="overview">
+        <h2>Горячие турниры:</h2>
+        {% if _list_contest_|length < 5 %}
+            <span><span class="unicode_false">&#10006;</span>Турниры не запланированы :(</span>
+        {% else %}
+            {% for elem in range(0, _list_contest_|length, 6) %}
+                <div class="container">
+                    <div class="info">
+                        <h4>{{ _list_contest_[elem + 1] }}</h4>
+                        <span>Длительность: <strong>{{ _list_contest_[elem + 2] }}</strong></span>
+                        <div class="countdown">
+                            <div data-countdown="{{ _list_contest_[elem + 3] }}">До начала:</div>
+                            <script>
+                                $(function () {
+                                    $('[data-countdown]').each(function () {
+                                        var $this = $(this), finalDate = $(this).data('countdown');
+                                        $this.countdown(finalDate, function (event) {
+                                            $this.html(event.strftime('<strong><span>До начала: %D дн. %H:%M:%S</span></strong>'))
+                                        }).on('finish.countdown', function () {
+                                            var UserHref = confirm("Перейти в панель участника?");
+                                            if (UserHref) $(location).prop('href', 'http://statistics-online.ru/contest/{{ contest_list_begin[elem] }}/problems');
+                                        });
+                                    });
+                                });
+                            </script>
+                        </div>
+                        {% if reg_user[_list_contest_[elem + 5]] %}
+                            <a class="btn-reg-contest-succes">Вы участвуете!</a>
+                        {% else %}
+                            <a class="btn-reg-contest"
+                               href="/reg/user_contest?contest_user_dbase={{ _list_contest_[elem + 4] }}">Зарегистрироваться</a>
+                        {% endif %}
+                    </div>
+                </div>
+            {% endfor %}
+        {% endif %}
+        {% if contest_list_begin|length > 5 %}
+            <h2>Текущие турниры:</h2>
+            {% for elem in range(0, contest_list_begin|length, 6) %}
+                <div class="container">
+                    <div class="info">
+                        <h4>{{ contest_list_begin[elem + 1] }}</h4>
+                        <span>Длительность: <strong>{{ contest_list_begin[elem + 2] }}</strong></span>
+                        <div class="countdown">
+                            <div data-countdown="{{ contest_list_begin[elem + 3] }}">До окончания:</div>
+                            <script>
+                                $('[data-countdown]').each(function () {
+                                    var $this = $(this), finalDate = $(this).data('countdown');
+                                    $this.countdown(finalDate, function (event) {
+                                        $this.html(event.strftime('<strong><span>До окончания: %D дн. %H:%M:%S</span></strong>'));
+                                    });
+                                });
+                            </script>
+                        </div>
+                        {% if reg_user_begin[contest_list_begin[elem + 5]] %}
+                            <div class="success-btn">
+                                <a class="btn-reg-contest-succes-vx"
+                                   href="/contest/{{ contest_list_begin[elem] }}/problems">Войти</a>
+                            </div>
+                        {% else %}
+                            <div class="no-success">
+                                <a class="btn-reg-contest-not-succes-vx">Регистрация закрыта</a>
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <div class="blog" id="blog">
+        <h2>Глобальные новости:</h2>
+        {% for p in posts %}
+            <div class="item-post">
+                <p class="data">От {{ p.timestamp[:11] }}</p>
+                <h3 class="title">{{ p.title }}</h3>
+                <p class="annonce">{{ p.announce|safe }}</p>
+                <a href="{{ url_for('showPost', id_post=p.id) }}" class="btn-blog">Подробнее -></a>
+            </div>
+        {% endfor %}
+    </div>
+    <div class="super_user" id="top">
+        <h2>Лидеры платформы:</h2>
+        <div class="rank">
+            <h3>По рейтингу:</h3>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Место</th>
+                    <th>Пользователь</th>
+                    <th>Рейтинг</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for key_rank, value_rank in list_rank.items() %}
+                    <tr>
+                        <td>{{ value_rank[1] }}</td>
+                        <td>{{ key_rank }}</td>
+                        <td>{{ value_rank[0] }}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <div class="task">
+            <h3>По количеству решенных задач:</h3>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Место</th>
+                    <th>Пользователь</th>
+                    <th>Количество задач</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for key_task, val_task in list_task.items() %}
+                    <tr>
+                        <td>{{ val_task[1] }}</td>
+                        <td>{{ key_task }}</td>
+                        <td>{{ val_task[0] }}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="statistics" id="stat">
+        <div class="statistics__inner">
+            <h1 class="statistics__header">
+                О платформе:
+            </h1>
+
+            <div class="statistics__element">
+                <img class="statistics__icon" src="{{ url_for('static', filename = 'main/img/server.svg') }}"
+                     alt="Сервера">
+                <p class="statistics__number">{{ ID_server }}</p>
+                <p class="statistics__title">Работающих серверов</p>
+            </div>
+            <div class="statistics__element">
+                <img class="statistics__icon" src="{{ url_for('static', filename = 'main/img/peoples.svg') }}"
+                     alt="Люди">
+                <p class="statistics__number">{{ ID_user }}</p>
+                <p class="statistics__title">Участников платформы</p>
+            </div>
+            <div class="statistics__element">
+                <img class="statistics__icon" src="{{ url_for('static', filename = 'main/img/time.svg') }}" alt="Время">
+                <p id="tik-tok" class="char mode"></p>
+                <p class="statistics__title">Время в системе (МСК)</p>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename = 'main/js/jquery.spincrement.min.js') }}"></script>
+    <script src="{{ url_for('static', filename = 'main/js/custom.js') }}"></script>
+    <script>
+        function fn(f, a) {
+            var c = {
+                cls: ["hour", "sp", "min", "spl", "sec"],
+                formatTime: function (b) {
+                    b = Math.floor(b / 1E3);
+                    var a = Math.floor(b / 60),
+                        d = Math.floor(a / 60);
+                    b %= 60;
+                    a %= 60;
+                    return [c.two(d % 24), ":", c.two(a), ":", c.two(b)]
+                },
+                two: function (b) {
+                    return (9 < b ? "" : "0") + b
+                },
+                timer: function (b) {
+                    var a = performance.now();
+                    requestAnimationFrame(function g(e) {
+                        e -= a;
+                        e = c.formatTime(b + e);
+                        c.cls.forEach(function (a, b) {
+                            a.innerHTML = e[b]
+                        });
+                        requestAnimationFrame(g)
+                    })
+                },
+                init: function () {
+                    a = a.split(":");
+                    a = 36E5 * a[0] + 6E4 * a[1] + 1E3 * a[2];
+                    c.cls = c.cls.map(function (a) {
+                        var d = document.createElement("span");
+                        d.classList.add(a);
+                        f.appendChild(d);
+                        return d
+                    });
+                    c.timer(a)
+                }
+            };
+            c.init()
+        }
+
+
+        var span = document.querySelector('.mode');
+        fn(span, '{{ MSKTIME }}');
+    </script>
+{% endblock %}
