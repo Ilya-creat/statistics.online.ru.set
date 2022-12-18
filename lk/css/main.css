@@ -1,0 +1,543 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+
+}
+
+body,html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-image: url(../img/fon_log.jpg);
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: Trebuchet MS, Helvetica;
+}
+
+/* шапка */
+header {
+  width: 100%;
+  padding: 10px 0.5% 0px 0.5%;
+  background: transparent;
+  float: left;
+  position: fixed;
+}
+
+header #logo{
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+header #logo span {
+  font-size: 1.7em;
+  line-height: 45px;
+  margin-left: 40px;
+  font-family: 'Suez One', serif;
+}
+
+.lk-button {
+  text-decoration: none;
+  padding: 7px 30px;
+  border-radius: 10px;
+  font-size: 1em;
+  background-color: #D1198B;
+  text-shadow: #454545 0 0 2px;
+  cursor: pointer;
+  color: white;
+}
+.lk-button:hover {
+  background-color: #9700BD;
+  text-decoration: none;
+}
+
+@media (min-width: 701px){
+  #logo{
+    float: left;
+    width: 30%;
+    font-size:1.1em;
+  }
+
+  #about{
+    float:right;
+    width: 67%;
+  }
+}
+
+@media (max-width: 700px){
+  #logo{
+    margin-top: 15px;
+    width: 100%;
+    font-size:1.5em;
+  }
+  header #logo span{
+    font-size:1.2em;
+  }
+  #about{
+    float:left;
+    width: 100%;
+  }
+}
+
+
+
+#about{
+  text-align:center;
+  font-size: 1em;
+  line-height: 40px;
+  margin-bottom: 10px;
+}
+
+#about > a {color: #fff;}
+#about > a:hover {color: #b0b0b0;}
+
+#about > a:not(:last-child){
+  margin-right: 7%;
+}
+
+@media (max-width: 650px) {
+  #about {
+    font-size : 0.9em;
+  }
+}
+
+@media (max-width: 450px) {
+  .lk-button {
+    padding: 3px 4px;
+    margin-right: 0%;
+  }
+  #about {
+    font-size : 0.8em;
+  }
+}
+
+
+/*Стили фиксированой шапки*/
+.fixed {
+  z-index: 5000;
+  background-color: #fff;
+  border-bottom: 1px solid silver;
+}
+
+
+header.fixed #logo {
+  color: #343434;
+}
+
+.fixed #about a{color: #343434}
+.fixed #about a:hover{color: #7c7c7c}
+.fixed #about a.lk-button {color: #fff}
+.fixed #about a.lk-button:hover{background-color: #9700BD;}
+
+/*Main block*/
+/*one*/
+#main-one {
+  background-image: url(../img/fon_log.jpg);
+  width: 100%;
+    min-height:100%;
+  padding-top: 70px;
+  background-blend-mode: multiply;
+  background-size: cover;
+  text-align:center;
+  background-attachment: fixed;
+}
+
+#main-one h1{
+  padding-top: 20%;
+  color: #6B00CF;
+}
+#main-one h1 {
+  background: linear-gradient(to right, red, orange, yellow, green, cyan, blue, violet);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: rainbow 20s ease infinite;
+  animation: rainbow 20s ease infinite;
+}
+
+@-webkit-keyframes rainbow {
+  0% { background-position: 0% 50% }
+  50% { background-position: 100% 50% }
+  100% { background-position: 0% 50% }
+}
+
+@keyframes rainbow {
+  0% { background-position: 0% 50% }
+  50% { background-position: 100% 50% }
+  100% { background-position: 0% 50% }
+}
+
+.floating-button {
+  text-decoration: none;
+  display: inline-block;
+  width: 140px;
+  height: 45px;
+  line-height: 45px;
+  border-radius: 45px;
+  margin: 10px 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 3px;
+  font-weight: 600;
+  color: #524f4e;
+  background: white;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, .1);
+  transition: .3s;
+  cursor: pointer;
+}
+.floating-button:hover {
+  background: #2EE59D;
+  box-shadow: 0 15px 20px rgba(46, 229, 157, .4);
+  color: white;
+  transform: translateY(-7px);
+}
+
+@media(min-width: 1001px){
+  #main-one {
+    height: 1000px;
+    font-size: 1.9em;
+  }
+}
+
+/*two*/
+
+.statistics {
+    width: 100%;
+}
+
+.statistics__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 60px 0;
+    margin-top: 20px;
+}
+
+.statistics__header {
+    width: 100%;
+    text-align: center;
+    line-height: 1.3;
+    padding: 0 15px 60px;
+    color: #e2e2e2;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.statistics__element {
+    background-image: url(../img/fon_log.jpg);
+    background-blend-mode: multiply;
+    background-color: #e3e3e3;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 30%;
+    border-radius: 20px;
+}
+
+.statistics__icon {
+    display: block;
+    width: 60px;
+    height: 50px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.statistics__element p {
+    color: #cdcdcd;
+    text-align: center;
+    line-height: 1.3;
+}
+
+.statistics__number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px
+}
+
+.statistics__title {
+    font-size: 1.125rem;
+}
+#tik-tok {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px
+}
+
+/*Блок overview*/
+#overview {
+    float: left;
+    border-top: 2px dashed #e4e3e3;
+    background-image: url(../img/fon_log.jpg);
+    background-blend-mode: multiply;
+    background-color: #403f40;
+    background-size: cover;
+    background-attachment: fixed;
+
+    width: 100%;
+    padding: 100px 0;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+}
+
+#overview .img {
+    display: flex;
+    float: left;
+    width: 20%;
+    margin-top: 50px;
+    margin-right: 5%;
+}
+
+#overview img {
+  width: 100%;
+  max-width: 500px;
+}
+
+#overview h2 {font-size: 4em;}
+#overview h4 {color: #ccc; font-size: 1.5em;}
+#overview span {display:block;font-size: 1.2em;}
+
+/*container*/
+.container {
+    margin: 50px;
+    padding: 20px 20px 20px 20px;
+    border: 2px solid grey;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    width: 600px;
+    display: inline-block;
+}
+
+a.btn-reg-contest {
+    width: 200px;
+    text-align: center;
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 15px;
+    border: #FA7900 4px solid;
+    color: #FA7900;
+    padding: 7px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin: 10px auto;
+    transition: .5s;
+    border-radius: 10px;
+}
+a.btn-reg-contest:hover {
+    cursor: pointer;
+    top: 5px;
+    transition: .5s;
+    color: #10FF58;
+    border: #10FF58 4px solid;
+    border-radius: 10px;
+}
+a.btn-reg-contest-succes {
+    width: 200px;
+    text-align: center;
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 15px;
+    border: #10FF58 4px solid;
+    color: #10FF58;
+    padding: 7px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin: 10px auto;
+    border-radius: 10px;
+}
+a.btn-reg-contest-succes-vx {
+    width: 125px;
+    text-align: center;
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    font-weight: 125;
+    font-size: 14px;
+    border: #10FF58 4px solid;
+    color: #10FF58;
+    padding: 7px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin: 10px auto;
+    border-radius: 6px;
+}
+a.btn-reg-contest-not-succes-vx {
+    width: 200px;
+    text-align: center;
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 15px;
+    border: #FA7900 4px solid;
+    color: #FA7900;
+    padding: 7px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin: 10px auto;
+    transition: .5s;
+    border-radius: 10px;
+}
+a.btn-reg-contest-succes-vx:hover {
+    cursor: pointer;
+    top: 5px;
+    transition: .5s;
+    color: #00CFCF;
+    border: #00CFCF 4px solid;
+    border-radius: 6px;
+}
+/*rank*/
+.super_user {
+    text-align: center;
+    width: 100%;
+    display: inline-block;
+}
+#top {
+    border-top: 2px dashed #e4e3e3;
+}
+#top h2 {font-size: 3em;padding: 20px 0 0 0; color: #fff;}
+#top h3 {font-size: 2em;padding: 20px 0 0 0; color: #fff;}
+.rank {
+    width: 50%;
+    float: right;
+    padding: 50px 10%;
+}
+
+.task {
+    width: 50%;
+    float: left;
+    padding: 50px 10%;
+}
+
+.table {
+	width: 100%;
+	margin-bottom: 20px;
+	border: none;
+    background-image: url(../img/fon_log.jpg);
+    background-blend-mode: multiply;
+    background-color: #e3e3e3;
+    background-size: cover;
+    background-attachment: fixed;
+    border-radius: 20px;
+}
+
+.table thead th {
+	font-weight: bold;
+	text-align: left;
+	border: none;
+	padding: 10px 15px;
+	background: #EDEDED;
+	font-size: 14px;
+	border-top: 1px solid #ddd;
+}
+.table tr th:first-child, .table tr td:first-child {
+	border-left: 1px solid #ddd;
+}
+.table tr th:last-child, .table tr td:last-child {
+	border-right: 1px solid #ddd;
+}
+.table thead tr th:first-child {
+	border-radius: 20px 0 0 0;
+}
+.table thead tr th:last-child {
+	border-radius: 0 20px 0 0;
+}
+.table tbody td {
+	text-align: left;
+	border: none;
+	padding: 10px 15px;
+	font-size: 14px;
+	vertical-align: top;
+}
+
+.table tbody tr:last-child td{
+	border-bottom: 1px solid #ddd;
+}
+.table tbody tr:last-child td:first-child {
+	border-radius: 0 0 0 20px;
+}
+.table tbody tr:last-child td:last-child {
+	border-radius: 0 0 20px 0;
+}
+
+.blog h2 {font-size: 3em;padding: 20px 0 0 0; color: #fff;}
+.blog h3 {font-size: 2em;padding: 20px 0 0 0; color: gray}
+
+.blog {
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    border-top: 2px dashed #e4e3e3;
+    display: inline-block;
+
+}
+.item-post {
+    margin: 50px;
+    padding: 20px 20px 20px 20px;
+    border: 5px solid #fff;
+    border-color: #888;
+    background-color: #fff;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    width: 600px;
+    display: inline-block;
+}
+.title {
+    text-decoration: none;
+}
+
+a.btn-blog {
+    width: 200px;
+    text-align: center;
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 15px;
+    border: #00CFCF 4px solid;
+    color: #00CFCF;
+    padding: 7px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin: 10px auto;
+    transition: .5s;
+    border-radius: 10px;
+}
+a.btn-blog:hover {
+    cursor: pointer;
+    top: 5px;
+    transition: .5s;
+    color: #8b01b9;
+    border: #8b01b9 4px solid;
+    border-radius: 6px;
+}
+
+/*footer блок*/
+#footer {
+  background-color: #242625;
+  border-top: 2px dashed #e4e3e3;
+  width: 100%;
+  float:left;
+  text-align: center;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  color: #fff;
+}
+
+@media (max-width: 560px) {
+  #footer span {font-size: 1em;}
+}

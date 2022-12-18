@@ -1,0 +1,228 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+
+}
+
+body,html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: #fff;
+  font-family: Trebuchet MS, Helvetica;
+}
+
+/* шапка */
+header {
+  width: 100%;
+  padding: 10px 0.5% 0px 0.5%;
+  background-color: #fff;
+  float: left;
+  position: fixed;
+}
+
+header #logo{
+  color: #000;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+header #logo span {
+  font-size: 1.7em;
+  line-height: 45px;
+  margin-left: 40px;
+  font-family: 'Suez One', serif;
+}
+
+@media (min-width: 701px){
+  #logo{
+    float: left;
+    width: 30%;
+    font-size:1.1em;
+  }
+
+  #about{
+    float:right;
+    width: 67%;
+
+  }
+}
+
+@media (max-width: 700px){
+  #logo{
+    margin-top: 15px;
+    width: 100%;
+    font-size:1.5em;
+  }
+  header #logo span{
+    font-size:1.2em;
+  }
+  #about{
+    float:left;
+    width: 100%;
+  }
+}
+
+
+
+#about{
+  text-align:center;
+  font-size: 1em;
+  line-height: 40px;
+  margin-bottom: 10px;
+}
+
+#about > a {color: #000;}
+#about > a:hover{color: #b0b0b0;}
+
+#about > a{
+  margin-right: 7%;
+}
+
+@media (max-width: 650px) {
+  #about {
+    font-size : 0.9em;
+
+  }
+}
+
+@media (max-width: 450px) {
+  #about {
+    font-size : 0.8em;
+  }
+}
+
+.block-main {
+    padding: 80px 80px;
+    min-height: 85%;
+}
+
+.contest-table {
+    margin-top: 30px;
+}
+.c-name {
+  font-size: 1em;
+  padding: 2px 40px;
+}
+
+.table {
+	width: 100%;
+	border: none;
+	margin-bottom: 20px;
+}
+.table thead th {
+	font-weight: bold;
+	text-align: left;
+	border: none;
+	padding: 10px 15px;
+	background: #d8d8d8;
+	font-size: 14px;
+}
+.table thead tr th:first-child {
+	border-radius: 8px 0 0 8px;
+}
+.table thead tr th:last-child {
+	border-radius: 0 8px 8px 0;
+}
+.table tbody td {
+	text-align: left;
+	border: none;
+	padding: 5px 15px;
+	font-size: 14px;
+}
+.table tbody tr{
+	background: #f3f3f3;
+}
+.table tbody tr td:first-child {
+	border-radius: 8px 0 0 8px;
+}
+.table tbody tr td:last-child {
+	border-radius: 0 8px 8px 0;
+}
+
+a.btn-reg-contest {
+    width: 200px;
+    text-align: center;
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 10px;
+    border: #FA7900 4px solid;
+    color: #FA7900;
+    padding: 7px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin: 10px auto;
+    transition: .5s;
+    border-radius: 10px;
+}
+a.btn-reg-contest:hover {
+    cursor: pointer;
+    top: 5px;
+    transition: .5s;
+    color: #00CFCF;
+    border: #00CFCF 4px solid;
+    border-radius: px;
+}
+a.btn-reg-contest-succes {
+    width: 125px;
+    text-align: center;
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    font-weight: 125;
+    font-size: 10px;
+    border: #00CFCF 4px solid;
+    color: #00CFCF;
+    padding: 7px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin: 10px auto;
+    border-radius: 6px;
+}
+
+a.btn-reg-contest-no-succes {
+    width: 200px;
+    text-align: center;
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 10px;
+    border: #00CFCF 4px solid;
+    color: #00CFCF;
+    padding: 7px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin: 10px auto;
+    border-radius: 6px;
+}
+a.btn-reg-contest-succes-vx {
+    width: 125px;
+    text-align: center;
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    font-weight: 125;
+    font-size: 10px;
+    border: #00CFCF 4px solid;
+    color: #00CFCF;
+    padding: 7px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin: 10px auto;
+    border-radius: 6px;
+}
+
+a.btn-reg-contest-succes-vx:hover {
+    cursor: pointer;
+    top: 5px;
+    transition: .5s;
+    color: #45029E;
+    border: #45029E 4px solid;
+    border-radius: 6px;
+}

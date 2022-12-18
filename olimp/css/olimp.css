@@ -1,0 +1,211 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+
+}
+
+
+body,html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: #fff;
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* шапка */
+header {
+  width: 100%;
+  padding: 10px 0.5% 0px 0.5%;
+  background-color: #fff;
+  float: left;
+  position: fixed;
+}
+
+header #logo{
+  color: #000;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+header #logo span {
+  font-size: 1.7em;
+  line-height: 45px;
+  margin-left: 40px;
+  font-family: 'Suez One', serif;
+}
+
+@media (min-width: 701px){
+  #logo{
+    float: left;
+    width: 30%;
+    font-size:1.1em;
+  }
+
+  #about{
+    float:right;
+    width: 67%;
+
+  }
+}
+
+@media (max-width: 700px){
+  #logo{
+    margin-top: 15px;
+    width: 100%;
+    font-size:1.5em;
+  }
+  header #logo span{
+    font-size:1.2em;
+  }
+  #about{
+    float:left;
+    width: 100%;
+  }
+}
+
+
+
+#about{
+  text-align:center;
+  font-size: 1em;
+  line-height: 40px;
+  margin-bottom: 10px;
+}
+
+#about > a {color: #000;}
+#about > a:hover{color: #b0b0b0;}
+
+#about > a{
+  margin-right: 7%;
+}
+
+@media (max-width: 650px) {
+  #about {
+    font-size : 0.9em;
+
+  }
+}
+
+@media (max-width: 450px) {
+  #about {
+    font-size : 0.8em;
+  }
+}
+#main {
+    float: left;
+    border-top: 2px dashed #e4e3e3;
+    background-image: url(../img/fon_olymp.png);
+    background-blend-mode: multiply;
+    background-color: #403f40;
+    background-size: cover;
+    background-attachment: fixed;
+
+    width: 100%;
+    padding: 100px 0;
+    text-align: center;
+    color: #fff;
+}
+.main {
+    width: 100%;
+    padding: 400px 45%;
+    min-height: 85%;
+}
+.text-field {
+    margin-bottom: 1rem;
+}
+
+.text-field__label {
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.text-field__input {
+    display: block;
+    width: 100%;
+    height: calc(2.25rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #bdbdbd;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.text-field__input::placeholder {
+      color: #212529;
+      opacity: 0.4;
+}
+
+.text-field__input:focus {
+      color: #212529;
+      background-color: #fff;
+      border-color: #bdbdbd;
+      outline: 0;
+      box-shadow: 0 0 0 0.2rem rgba(158, 158, 158, 0.25);
+}
+
+.text-field__input:disabled,
+    .text-field__input[readonly] {
+      background-color: #f5f5f5;
+      opacity: 1;
+}
+/*
+display: block – устанавливает блочное отображение;
+width: 100% – занимает всю доступную ширину;
+height: calc(2.25rem + 2px) – высота элемента определяется путём сложения 2.25rem (font-size * line-height + padding-top + padding-bottom) и 2px (ширина верхней и нижней границы);
+margin: 0 – убирает margin отступы;
+padding: 0.375rem 0.75rem – внутренние поля: сверху и снизу – 0.375rem, а слева и справа – 0.75rem;
+font-family: inherit – чтобы шрифт был такой как у родительского элемента, а не тот который браузер по умолчанию назначает для <input>;
+font-size: 1rem – устанавливает явный размер шрифта, иначе будет браться из стилей браузера для <input>;
+font-weight: 400 – задаёт начертание шрифта;
+line-height: 1.5 – высота строки (1.5 * размер шрифта);
+color: #212529 – цвет шрифта;
+background-color: #fff – цвет фона;
+background-clip: padding-box – указывает, что фон (фоновое изображение) нужно рисовать только до внешнего края отступа (под границей не выводить);
+border: 1px solid #bdbdbd – устанавливает границу, у которой: 1px (толщина), solid (тип линии) и #bdbdbd (цвет);
+border-radius: 0.25rem – радиус скругления углов;
+transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out – выполняет изменение значений свойств border-color и box-shadow с анимацией длительностью 0.15 секунд посредством временной функцией ease-in-out.
+*/
+
+.btn-contest {
+    width: 250px;
+    text-align: center;
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    font-weight: 250;
+    font-size: 15px;
+    border: #00CFCF 4px solid;
+    color: #00CFCF;
+    padding: 7px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin: 10px auto;
+    border-radius: 6px;
+}
+
+.btn-contest:hover {
+    cursor: pointer;
+    top: 5px;
+    transition: .5s;
+    color: #45029E;
+    border: #45029E 4px solid;
+    border-radius: 6px;
+}

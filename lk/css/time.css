@@ -1,0 +1,89 @@
+/* шапка */
+header {
+  width: 100%;
+  padding: 10px 0.5% 0px 0.5%;
+  background-color: #fff;
+  float: left;
+  position: fixed;
+}
+
+header #logo{
+  color: #000;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+header #logo span {
+  font-size: 1.7em;
+  line-height: 45px;
+  margin-left: 40px;
+  font-family: 'Suez One', serif;
+}
+
+@media (min-width: 701px){
+  #logo{
+    float: left;
+    width: 30%;
+    font-size:1.1em;
+  }
+
+  #about{
+    float:right;
+    width: 67%;
+
+  }
+}
+
+@media (max-width: 700px){
+  #logo{
+    margin-top: 15px;
+    width: 100%;
+    font-size:1.5em;
+  }
+  header #logo span{
+    font-size:1.2em;
+  }
+  #about{
+    float:left;
+    width: 100%;
+  }
+}
+
+
+
+#about{
+  text-align:center;
+  font-size: 1em;
+  line-height: 40px;
+  margin-bottom: 10px;
+}
+
+#about > a {color: #000;}
+#about > a:hover{color: #b0b0b0;}
+
+#about > a{
+  margin-right: 7%;
+}
+
+@media (max-width: 650px) {
+  #about {
+    font-size : 0.9em;
+
+  }
+}
+
+@media (max-width: 450px) {
+  #about {
+    font-size : 0.8em;
+  }
+}
+
+.main {
+    margin: auto;
+    padding: 120px;
+}
+#footer {
+    color: #000;
+    border-top: 2px dashed #000;
+    background-color: #fff;
+}

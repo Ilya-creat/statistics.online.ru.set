@@ -1,0 +1,342 @@
+
+
+body {
+  background-color: #fff;
+  font-family: Trebuchet MS, Helvetica;
+}
+
+
+/* шапка */
+header {
+  width: 100%;
+  padding: 10px 0.5% 0 0.5%;
+  background-color: #fff;
+  float: left;
+  position: fixed;
+}
+
+header #logo{
+  color: #000;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+header #logo span {
+  font-size: 1.7em;
+  line-height: 45px;
+  margin-left: 40px;
+  font-family: 'Suez One', serif;
+}
+
+@media (min-width: 701px){
+  #logo{
+    float: left;
+    width: 30%;
+    font-size:1.1em;
+  }
+
+  #about{
+    float:right;
+    width: 67%;
+
+  }
+}
+
+@media (max-width: 700px){
+  #logo{
+    margin-top: 15px;
+    width: 100%;
+    font-size:1.5em;
+  }
+  header #logo span{
+    font-size:1.2em;
+  }
+  #about{
+    float:left;
+    width: 100%;
+  }
+}
+
+
+
+#about{
+  text-align:center;
+  font-size: 1em;
+  line-height: 40px;
+  margin-bottom: 10px;
+}
+
+#about > a {color: #000;}
+#about > a:hover{color: #b0b0b0;}
+
+#about > a{
+  margin-right: 7%;
+}
+
+@media (max-width: 650px) {
+  #about {
+    font-size : 0.9em;
+
+  }
+}
+
+@media (max-width: 450px) {
+  #about {
+    font-size : 0.8em;
+  }
+}
+
+.main {
+    padding: 120px;
+    max-width: 2000px;
+    margin: 0 auto;
+}
+
+.mini-border {
+    border: 2px solid #555;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.info-mini-border {
+    text-align:center;
+    font-size: 1em;
+}
+
+.info-mini-border > a{
+  margin-right: 5%;
+  color: #555
+}
+
+
+
+#footer {
+    background-color: #fff;
+    color: #000;
+}
+
+.get_task {
+    padding-top: 60px;
+    text-align: justify;
+    padding-bottom: 70px;
+}
+
+.task_name {
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.task_text {
+    padding-left: 25%;
+    padding-right: 25%;
+}
+
+.example {
+    width: 100%;
+    padding-left: 30%;
+    padding-right: 30%;
+}
+
+.example_input {
+    width: 50%;
+    float: left;
+}
+
+.example_output {
+    width: 50%;
+    float: right;
+}
+.example_input {
+    width: 30%;
+	margin-bottom: 20px;
+	border: 1px solid #dddddd;
+	border-collapse: collapse;
+}
+.example_input th {
+	font-weight: bold;
+	padding: 5px;
+	background: #efefef;
+	border: 1px solid #dddddd;
+}
+.example_input td {
+    border: 1px solid #dddddd;
+    padding: 5px;
+}
+
+.example_output {
+    width: 30%;
+	margin-bottom: 20px;
+	border: 1px solid #dddddd;
+	border-collapse: collapse;
+}
+.example_output th {
+	font-weight: bold;
+	padding: 5px;
+	background: #efefef;
+	border: 1px solid #dddddd;
+}
+.example_output td {
+    border: 1px solid #dddddd;
+    padding: 5px;
+}
+
+#text {
+    padding-bottom: 20px;
+}
+#input__text {
+    padding-bottom: 20px;
+}
+#output__text {
+    padding-bottom: 20px;
+}
+#scope__text {
+    padding-bottom: 20px;
+}
+
+.gl {
+    padding-bottom: 10px;
+}
+
+.form-act {
+    padding-bottom: 100px;
+    padding-top: 60px;
+}
+.input-task {
+    padding-bottom: 15px;
+}
+.btn {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    border-color: #fff;
+}
+
+.task_all {
+    max-width: 1000px;
+}
+
+.display-task {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+
+.task-border {
+    border: 1px solid #7c7c7c;
+    border-radius: 10px;
+}
+
+.task {
+    padding: 20px 20px;
+}
+
+.task:hover {
+    cursor: pointer;
+    background: rgba(210, 210, 210, 0.5);
+}
+
+.task-cls{
+    display:block;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+.board-name h2{
+    display: inline;
+}
+.svg-g {
+    fill: #3604c4;
+}
+
+.svg-g:hover {
+    fill: #ff0000;
+}
+
+.check-status {
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.check-status-r {
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.table {
+	width: 100%;
+	border: none;
+	margin-bottom: 20px;
+	border-collapse: separate;
+}
+.table thead th {
+	font-weight: bold;
+	text-align: left;
+	border: none;
+	padding: 10px 15px;
+	background: #EDEDED;
+	font-size: 14px;
+	border-top: 1px solid #ddd;
+}
+.table tr th:first-child, .table tr td:first-child {
+	border-left: 1px solid #ddd;
+}
+.table tr th:last-child, .table tr td:last-child {
+	border-right: 1px solid #ddd;
+}
+.table thead tr th:first-child {
+	border-radius: 20px 0 0 0;
+}
+.table thead tr th:last-child {
+	border-radius: 0 20px 0 0;
+}
+.table tbody td {
+	text-align: center;
+	border: none;
+	padding: 10px 15px;
+	font-size: 14px;
+	vertical-align: top;
+}
+.table tbody tr:nth-child(even) {
+	background: #F8F8F8;
+}
+.table tbody tr:last-child td{
+	border-bottom: 1px solid #ddd;
+}
+.table tbody tr:last-child td:first-child {
+	border-radius: 0 0 0 20px;
+}
+.table tbody tr:last-child td:last-child {
+	border-radius: 0 0 20px 0;
+}
+
+.check-status-r {
+    padding-top: 50px;
+}
+
+caption {
+    font-size: 25px;
+    padding-bottom: 15px;
+}
+
+.status-result-testing {
+    color: #005dff;
+    font-weight: bold;
+}
+
+.status-result-not-full {
+    color: #ff0000;
+    font-weight: bold;
+}
+
+.status-result-full {
+    color: #03c52a;
+    font-weight: bold;
+}
+
+.test-info {
+    color: #000000;
+    font-weight: bold;
+}
+
