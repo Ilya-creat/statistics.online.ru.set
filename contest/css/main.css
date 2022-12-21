@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@1,100&display=swap');
 
 body {
   background-color: #fff;
@@ -116,10 +116,84 @@ header #logo span {
     color: #000;
 }
 
-.get_task {
+.central_block {
     padding-top: 60px;
-    text-align: justify;
     padding-bottom: 70px;
+    width: 100%;
+    max-width: 3000px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.task-board {
+    width: 30%; /* Можно задать любую другую ширину блока */
+    max-width: 300px;
+    margin: .5rem;
+    color: #FFFFFF;
+}
+
+.content-board {
+    border-radius: 10px;
+    background-color: #0F2346;
+    padding: 20px 15px;
+    font-family: 'Chivo Mono', monospace;
+}
+
+.contest-info {
+    padding-top: 10px;
+}
+
+.contest-info .task-contest {
+    padding-left: 10px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.contest-info .task-contest .task-info {
+    padding-top: 10px;
+}
+
+.contest-info .task-contest .task-block-select {
+    max-width: 25px;
+}
+
+.contest-info .task-contest .task-block-text {
+    max-width: 225px;
+}
+
+.contest-info .task-contest .task-block-result {
+    max-width: 50px;
+}
+
+.contest-info .result {
+    margin-top: 10px;
+    padding-top: 5px;
+    border-top: 2px solid #FFFFFF;
+}
+
+
+.task-info-selected {
+    width: 30%; /* Можно задать любую другую ширину блока */
+    max-width: 300px;
+    margin: .5rem;
+    color: #FFFFFF;
+}
+
+.task-info-block {
+    border-radius: 10px;
+    background-color: #0F2346;
+    padding: 20px 15px;
+    font-family: 'Chivo Mono', monospace;
+}
+
+
+.get_task {
+  width: 100%; /* Можно задать любую другую ширину блока */
+  margin: .5rem;
 }
 
 .task_name {
