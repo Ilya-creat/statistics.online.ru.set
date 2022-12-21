@@ -73,7 +73,10 @@
                                     $('[data-countdown]').each(function () {
                                         var $this = $(this), finalDate = $(this).data('countdown');
                                         $this.countdown(finalDate, function (event) {
-                                            $this.html(event.strftime('<strong><span>До начала: %D дн. %H:%M:%S</span></strong>'))
+                                            if (String(event.strftime('%D')) != "00"){
+                                                $this.html(event.strftime('<strong><span>До начала: %D дн. %H:%M:%S</span></strong>'));
+                                            }else
+                                                $this.html(event.strftime('<strong><span>До начала: %H:%M:%S</span></strong>'));
                                         }).on('finish.countdown', function () {
                                             var UserHref = confirm("Перейти в панель участника?");
                                             if (UserHref) $(location).prop('href', 'http://statistics-online.ru/contest/{{ contest_list_begin[elem] }}/problems');
@@ -105,7 +108,10 @@
                                 $('[data-countdown]').each(function () {
                                     var $this = $(this), finalDate = $(this).data('countdown');
                                     $this.countdown(finalDate, function (event) {
-                                        $this.html(event.strftime('<strong><span>До окончания: %D дн. %H:%M:%S</span></strong>'));
+                                        if (String(event.strftime('%D')) != "00"){
+                                            $this.html(event.strftime('<strong><span>До окончания: %D дн. %H:%M:%S</span></strong>'));
+                                        }else
+                                            $this.html(event.strftime('<strong><span>До окончания: %D дн. %H:%M:%S</span></strong>'));
                                     });
                                 });
                             </script>

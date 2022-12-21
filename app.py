@@ -37,7 +37,7 @@ ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif', 'csv'}
 compiler = {'python3': 'Python 3.10', 'pypy3': 'Pypy 3.9', 'gcc': 'GCC C 12.2',
             'gnu20': 'GNU C++ 20', 'java17': 'Java 17', 'js9': 'JavaScript 9', 'freepascal': 'Free Pascal 3.0.4'}
 url_ = 'http://192.168.1.67:5000'
-url_server = 'http://192.168.1.71:5001'  # 'https://server.statistics-online.ru'
+url_server = 'http://192.168.1.67:5001'  # 'https://server.statistics-online.ru'
 import urllib3
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)

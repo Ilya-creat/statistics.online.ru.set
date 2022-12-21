@@ -83,7 +83,10 @@
                                     $('[data-countdown]').each(function () {
                                         var $this = $(this), finalDate = $(this).data('countdown');
                                         $this.countdown(finalDate, function (event) {
-                                            $this.html(event.strftime('До конца: %D дн. %H:%M:%S'));
+                                            if (String(event.strftime('%D')) != "00"){
+                                                    $this.html(event.strftime('До конца: %D дн. %H:%M:%S'));
+                                                }else
+                                                    $this.html(event.strftime('До конца: %H:%M:%S'));
                                         });
                                     });
                                 </script>
@@ -155,7 +158,10 @@
                                         $('[data-countdown]').each(function () {
                                             var $this = $(this), finalDate = $(this).data('countdown');
                                             $this.countdown(finalDate, function (event) {
-                                                $this.html(event.strftime('До старта: %D дн. %H:%M:%S'))
+                                                if (String(event.strftime('%D')) != "00"){
+                                                    $this.html(event.strftime('До старта: %D дн. %H:%M:%S'));
+                                                }else
+                                                    $this.html(event.strftime('До старта: %H:%M:%S'));
                                             }).on('finish.countdown', function () {
                                                 var UserHref = confirm("Перейти в панель участника?");
                                                 if (UserHref) $(location).prop('href', '{{ url_ }}/contest/{{ contest_list[i] }}/problems');
