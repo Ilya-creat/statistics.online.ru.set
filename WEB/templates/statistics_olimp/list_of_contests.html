@@ -1,0 +1,237 @@
+{% extends 'base.html' %}
+
+{% block css %}
+    {{ url_for('static', filename='olimp/css/list_of_contest.css') }}
+{% endblock %}
+
+{% block body %}
+    <!--Menu-->
+    <header>
+        <a href="#top" id="logo" onclick="slowScroll('#top')">
+            <span>{{ header }}</span>
+        </a>
+        <div id="about">
+            {% for key,values in header_map.items() %}
+                {% if values[0] != '/' %}
+                    <a href="#{{ values }}" title="{{ key }}" onclick="slowScroll('#{{ values }}')">{{ key }}</a>
+                {% else %}
+                    <a href="{{ values }}" title="{{ key }}">{{ key }}</a>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </header>
+    {% for cat, msg in get_flashed_messages(True) %}
+        {% if cat == 'error' %}
+            <div class="alert">
+                <span class="closebtn">×</span>
+                <strong>Ошибка!</strong> {{ msg }}
+            </div>
+        {% elif cat == 'success' %}
+            <div class="alert success">
+                <span class="closebtn">×</span>
+                <strong>Успех!</strong> {{ msg }}
+            </div>
+        {% elif cat == 'info' %}
+            <div class="alert info">
+                <span class="closebtn">×</span>
+                <strong>Оповещение.</strong> {{ msg }}
+            </div>
+        {% elif cat == 'warning' %}
+            <div class="alert warning">
+                <span class="closebtn">×</span>
+                <strong>Внимание!</strong> {{ msg }}
+            </div>
+        {% endif %}
+    {% endfor %}
+    <main class="block-main">
+        <form>
+            <select>
+                <option type="submit">Все соревнования</option>
+                <option type="submit">Результаты соревнований</option>
+            </select>
+        </form>
+        {% if contest_list_begin|length > 2 %}
+            <center><h3>Список начатых турниров:</h3></center>
+            <div class="contest-table">
+                <center>
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>Название соревнования</th>
+                            <th>Дата завершения</th>
+                            <th>Авторы</th>
+                            <th>Время выполнения задач</th>
+                            <th>Статус</th>
+                            <th>Участников</th>
+                            <th>Дивизион</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for i in range(0, contest_list_begin|length, 9) %}
+                            <tr>
+                                <td>
+                                    <center>{{ contest_list_begin[i + 1] }}</center>
+                                </td>
+                                <td>
+                                    <center>{{ contest_list_begin[i + 7][:-6] }}<a
+                                            href="/time?contest={{ contest_list_begin[i] }}"
+                                            style="text-decoration: none; color: #000;">
+                                        ({{ contest_list_begin[i + 7][-6:] }} UTC MSK)</a><br><br><span
+                                            data-countdown="{{ contest_list_begin[i + 7] }}"></span></center>
+                                </td>
+                                <script type="text/javascript">
+                                    $('[data-countdown]').each(function () {
+                                        var $this = $(this), finalDate = $(this).data('countdown');
+                                        $this.countdown(finalDate, function (event) {
+                                            if (String(event.strftime('%D')) != "00"){
+                                                    $this.html(event.strftime('До конца: %D дн. %H:%M:%S'));
+                                                }else
+                                                    $this.html(event.strftime('До конца: %H:%M:%S'));
+                                        });
+                                    });
+                                </script>
+                                {% if contest_list_begin[i + 4] %}
+                                    <td>
+                                        <center>{% for author in range(contest_list_begin[i + 4]|length) %}
+                                            {{ contest_list_begin[i + 4][author] }}<br>
+                                        {% endfor %}
+                                        </center>
+                                    </td>
+                                {% else %}
+                                    <td>
+                                        <center>Не указано</center>
+                                    </td>
+                                {% endif %}
+                                <td>
+                                    <center>{{ contest_list_begin[i + 2] }}</center>
+                                </td>
+                                {% if reg_user_begin[contest_list_begin[i + 8]] %}
+                                    <td><a class="btn-reg-contest-succes-vx"
+                                           href="/contest/{{ contest_list_begin[i] }}/problems">Войти</a></td>
+                                {% else %}
+                                    <td><a class="btn-reg-contest-no-succes">Регистрация закрыта</a></td>
+                                {% endif %}
+                                <td>
+                                    <center>{{ reg_begin[contest_list_begin[i + 8]] }}</center>
+                                </td>
+                                <td>
+                                    <center>{{ contest_list_begin[i + 6] }}</center>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </center>
+            </div>
+        {% endif %}
+        {% if contest_list| length > 1 %}
+            <center><h3>Список не начатых турниров:</h3></center>
+            <div class="contest-table">
+                <center>
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>Название соревнования</th>
+                            <th>Дата начала</th>
+                            <th>Авторы</th>
+                            <th>Время выполнения задач</th>
+                            <th>Статус</th>
+                            <th>Участников</th>
+                            <th>Дивизион</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for i in range(0, contest_list|length, 8) %}
+                            <tr>
+                                <td>
+                                    <center>{{ contest_list[i + 1] }}</center>
+                                </td>
+                                <td>
+                                    <center>{{ contest_list[i + 3][0] }}<a href="/time?contest={{ contest_list[i] }}"
+                                                                           style="text-decoration: none; color: #000;"
+                                                                           id="cont"> ({{ contest_list[i + 3][1][-6:] }}
+                                        UTC MSK)</a><br><br><span data-countdown="{{ contest_list[i + 3][1] }}"></span>
+                                    </center>
+                                </td>
+                                <script type="text/javascript">
+                                    $(function () {
+                                        $('[data-countdown]').each(function () {
+                                            var $this = $(this), finalDate = $(this).data('countdown');
+                                            $this.countdown(finalDate, function (event) {
+                                                if (String(event.strftime('%D')) != "00"){
+                                                    $this.html(event.strftime('До старта: %D дн. %H:%M:%S'));
+                                                }else
+                                                    $this.html(event.strftime('До старта: %H:%M:%S'));
+                                            }).on('finish.countdown', function () {
+                                                var UserHref = confirm("Перейти в панель участника?");
+                                                if (UserHref) $(location).prop('href', '{{ url_ }}/contest/{{ contest_list[i] }}/problems');
+                                            });
+                                        });
+                                    });
+                                </script>
+                                {% if contest_list[i + 4] %}
+                                    <td>
+                                        <center>{% for author in range(contest_list[i + 4]|length) %}
+                                            {{ contest_list[i + 4][author] }}<br>
+                                        {% endfor %}
+                                        </center>
+                                    </td>
+                                {% else %}
+                                    <td>
+                                        <center>Ожидание...</center>
+                                    </td>
+                                {% endif %}
+                                <td>
+                                    <center>{{ contest_list[i + 2] }}</center>
+                                </td>
+                                {% if reg_user[contest_list[i + 7]] %}
+                                    <td><a class="btn-reg-contest-succes">Вы участвуете!</a></td>
+                                {% else %}
+                                    <td><a class="btn-reg-contest"
+                                           href="/reg/user_contest?contest_user_dbase={{ contest_list[i + 5] }}">Зарегистрироваться</a>
+                                    </td>
+                                {% endif %}
+                                <td>
+                                    <center>{{ reg_success[contest_list[i + 7]] }}</center>
+                                </td>
+                                <td>
+                                    <center>{{ contest_list[i + 6] }}</center>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </center>
+            </div>
+        {% endif %}
+        {% if contest_list| length == 1 %}
+            <div>
+                <h3>
+                    <center> Турниры не запланированы :(</center>
+                </h3>
+            </div>
+        {% endif %}
+    </main>
+    <script>
+        let $ContestTime = new Date('{{ time_system }}'.slice(0, 16));
+        const $timezone = new Date().getTimezoneOffset();
+        let $DateUser = new Date(ContestTime.getTime() + ((-timezone - 3 * 60) * 60 * 1000));
+        console.log(DateUser);
+        let $elem = document.getElementById('user-local-time');
+        let $hours = Math.floor(-timezone / 60);
+        let $minutes = Math.round((-timezone % 60) / 60000);
+        if ((-timezone) > 0) {
+            if (minutes < 10) {
+                elem.innerHTML = `${DateUser} <sup>(+${hours + 3}:0${minutes} UTC)</sup>`;
+            } else {
+                elem.innerHTML = `${DateUser} <sup>(+${hours + 3}:${minutes} UTC)</sup>`;
+            }
+        } else {
+            if (minutes < 10) {
+                elem.innerHTML = `${DateUser} <sup>(-${hours - 3}:0${minutes} UTC)</sup>`;
+            } else {
+                elem.innerHTML = `${DateUser} <sup>(-${hours - 3}:${minutes} UTC)</sup>`;
+            }
+        }
+    </script>
+{% endblock %}

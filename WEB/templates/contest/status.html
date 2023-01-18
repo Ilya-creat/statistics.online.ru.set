@@ -1,0 +1,177 @@
+{% extends 'base.html' %}
+
+{% block css %}
+    {{ url_for('static', filename ='contest/css/main.css') }}
+{% endblock %}
+{% block body %}
+    <header>
+        <a id="logo" href="/">
+            <span>{{ header }}</span>
+        </a>
+        <div id="about">
+            {% for key,values in header_map.items() %}
+                <a href="{{ values }}" title="{{ key }}">{{ key }}</a>
+            {% endfor %}
+        </div>
+    </header>
+    {% for cat, msg in get_flashed_messages(True) %}
+        {% if cat == 'error' %}
+            <div class="alert">
+                <span class="closebtn">×</span>
+                <strong>Ошибка!</strong> {{ msg }}
+            </div>
+        {% elif cat == 'success' %}
+            <div class="alert success">
+                <span class="closebtn">×</span>
+                <strong>Успех!</strong> {{ msg }}
+            </div>
+        {% elif cat == 'info' %}
+            <div class="alert info">
+                <span class="closebtn">×</span>
+                <strong>Оповещение.</strong> {{ msg }}
+            </div>
+        {% elif cat == 'warning' %}
+            <div class="alert warning">
+                <span class="closebtn">×</span>
+                <strong>Внимание!</strong> {{ msg }}
+            </div>
+        {% endif %}
+    {% endfor %}
+    <div class="main">
+        <div class="mini-border">
+            <div class="info-mini-border">
+                {% for key,values in option_map.items() %}
+                    <a href="{{ values }}" title="{{ key }}">{{ key }}</a>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="check-status">
+            <div class="check-status-r">
+                <table class="table">
+                    <caption>Результат тестирования [Общий]</caption>
+                    <thead>
+                    <tr>
+                        <th>№</th>
+                        <th>Отправка</th>
+                        <th>Участник</th>
+                        <th>Задача</th>
+                        <th>Язык</th>
+                        <th>Статус</th>
+                        <th>Время, сек.</th>
+                        <th>Память, кб.</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for i, j in result.items() %}
+                        <tr>
+                            <td>{{ i }}</td>
+                            <td>{{ j['time_post'] }}</td>
+                            <td><a href="/profile/{{ j['user'][0] }}">{{ j['user'][1] }}</a></td>
+                            <td>
+                                <a href="./problems/{{ j['task_id'][1] }}"><strong>{{ j['task_id'][1] }}</strong>. {{ j['task_id'][0][1] }}
+                                </a></td>
+                            <td>{{ j['lang'] }}</td>
+                            {% if contest_config == 'IOI' %}
+                                {% if j['status'] != 'OK' %}
+                                    {% if j['status'] == 'bruh' or j['status'] == None %}
+                                        <td><a>Решение зависло</a></td>
+                                    {% elif j['status'] == 'compilation...' %}
+                                        <td><a>Компилируется... </a></td>
+                                    {% elif j['status'] == 'COMPILATION_ERROR' %}
+                                        <td><a>Ошибка компиляции</a></td>
+                                    {% elif j['status'] == 'RUN_ERROR' %}
+                                        <td><a>Произошла ошибка во время исполнения на <span
+                                                class="test-info">{{ j['fail'] }}</span> тесте</a></td>
+                                    {% elif j['status'] == 'testing...' %}
+                                        <td class="status-result-testing"><a>Тестируется на <span
+                                                class="test-info">{{ j['test'] }}</span> тесте</a></td>
+                                    {% elif j['status'] == 'wait...' %}
+                                        <td class="status-result-testing"><a>В очереди... </a></td>
+                                    {% elif j['points'] % 100 >= 10 and j['points'] % 100 <= 20 %}
+                                        <td class="status-result-not-full"><a>Частичное решение</a> [{{ j['points'] }}
+                                            баллов]
+                                        </td>
+                                    {% elif j['points'] % 10 == 1 %}
+                                        <td class="status-result-not-full"><a>Частичное решение</a> [{{ j['points'] }}
+                                            балл]
+                                        </td>
+                                    {% elif j['points'] % 10 >= 2 and  j['points'] % 10 <= 4 %}
+                                        <td class="status-result-not-full"><a>Частичное решение</a> [{{ j['points'] }}
+                                            баллa]
+                                        </td>
+                                    {% else %}
+                                        <td class="status-result-not-full"><a>Частичное решение</a> [{{ j['points'] }}
+                                            баллов]
+                                        </td>
+                                    {% endif %}
+                                {% else %}
+                                    {% if j['points'] % 100 >= 10 and j['points'] % 100 <= 20 %}
+                                        <td class="status-result-full"><a>Полное решение</a> [{{ j['points'] }} баллов]
+                                        </td>
+                                    {% elif j['points'] % 10 == 1 %}
+                                        <td class="status-result-full"><a>Полное решение</a> [{{ j['points'] }} балл]
+                                        </td>
+                                    {% elif j['points'] % 10 >= 2 and  j['points'] % 10 <= 4 %}
+                                        <td class="status-result-full"><a>Полное решение</a> [{{ j['points'] }} баллa]
+                                        </td>
+                                    {% else %}
+                                        <td class="status-result-full"><a>Полное решение</a> [{{ j['points'] }} баллов]
+                                        </td>
+                                    {% endif %}
+                                {% endif %}
+                            {% elif contest_config == 'ICPC' %}
+                                {% if j['status'] != 'OK' %}
+                                    {% if j['status'] == 'bruh' or j['status'] == None %}
+                                        <td><a>Решение зависло</a></td>
+                                    {% elif j['status'] == 'compilation...' %}
+                                        <td><a>Компилируется... </a></td>
+                                    {% elif j['status'] == 'COMPILATION_ERROR' %}
+                                        <td><a>Ошибка компиляции</a></td>
+                                    {% elif j['status'] == 'RUN_ERROR' %}
+                                        <td><a>Произошла ошибка во время исполнения на <span
+                                                class="test-info">{{ j['fail'] }}</span> тесте</a></td>
+                                    {% elif j['status'] == 'testing...' %}
+                                        <td class="status-result-testing"><a>Тестируется на <span
+                                                class="test-info">{{ j['test'] }}</span> тесте</a></td>
+                                    {% elif j['status'] == 'wait...' %}
+                                        <td class="status-result-testing"><a>В очереди... </a></td>
+                                    {% elif j['status'] == 'WRONG_ANSWER' %}
+                                        <td class="status-result-not-full"><a>Неправильный ответ на <span
+                                                class="test-info">{{ j['fail'] }}</span> тесте</a></td>
+                                    {% elif j['status'] == 'PRESENTATION_ERROR' %}
+                                        <td class="status-result-not-full"><a>Неправильный формат вывода на <span
+                                                class="test-info">{{ j['fail'] }}</span> тесте</a></td>
+                                    {% elif j['status'] == 'TIME_LIMIT' %}
+                                        <td class="status-result-not-full"><a>Превышен лимит времени на <span
+                                                class="test-info">{{ j['fail'] }}</span> тесте</a></td>
+                                    {% elif j['status'] == 'MEMORY_LIMIT' %}
+                                        <td class="status-result-not-full"><a>Превышен лимит памяти на <span
+                                                class="test-info">{{ j['fail'] }}</span> тесте</a></td>
+                                    {% elif j['status'] == 'IGNORE' %}
+                                        <td><a>Попытка проигнорирована</a></td>
+                                    {% else %}
+                                        <td class="status-result-testing"><a>Тестируется на <span
+                                                class="test-info">{{ j['test'] }}</span> тесте</a></td>
+                                    {% endif %}
+                                {% else %}
+                                    <td class="status-result-full"><a>Полное решение</a></td>
+                                {% endif %}
+                            {% endif %}
+                            {% if j['bad_time'] != None %}
+                                <td>{{ j['bad_time'] }}</td>
+                            {% else %}
+                                <td>-</td>
+                            {% endif %}
+                            {% if j['bad_memory'] != None %}
+                                <td>{{ j['bad_memory'] }}</td>
+                            {% else %}
+                                <td>-</td>
+                            {% endif %}
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}

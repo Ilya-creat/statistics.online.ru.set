@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block css %}
+    {{ url_for('static', filename ='contest/css/main.css') }}
+{% endblock %}
+{% block body %}
+    <header xmlns="http://www.w3.org/1999/html">
+        <a id="logo" href="/">
+            <span>{{ header }}</span>
+        </a>
+        <div id="about">
+            {% for key,values in header_map.items() %}
+                <a href="{{ values }}" title="{{ key }}">{{ key }}</a>
+            {% endfor %}
+        </div>
+    </header>
+
+    <div class="main">
+        {% if task_list %}
+            <div class="mini-border">
+                <div class="info-mini-border">
+                    {% for key,values in option_map.items() %}
+                        <a href="{{ values }}" title="{{ key }}">{{ key }}</a>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="display-task">
+                <div class="task-border">
+                    <div class="board-name" style="padding: 10px 50px;">
+                        <h2>Задачи</h2>
+                        <h2 style="float: right;padding-right: 225px;">Отправить</h2>
+                    </div>
+                    <div class="task_all">
+                        {% for ind, task in task_list.items() %}
+                            <div class="task">
+                                <div class="task-cls">
+                                    <a href="problems/{{ ind }}" style="text-decoration: none"
+                                       class="a-task"><strong>{{ ind }}</strong>. {{ task.text }}</a>
+                                    <a style="float: right;text-decoration: none; padding-right: 300px;"
+                                       href="send?task={{ ind }}" title="Отправить решение!">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                             viewBox="0 0 48 48" class="svg-g">
+                                            <path d="M4.02 42L46 24 4.02 6 4 20l30 4-30 4z"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        {% else %}
+            <div class="false"
+                 style="border: 1px solid #00CFD6; color: #fff; background: #00CFD6; padding: 25px; margin-top: 50px; border-radius: 10px;">
+                <h4>
+                    <center>Задачи не загружены или произошел сбой в системе.</center>
+                </h4>
+            </div>
+        {% endif %}
+    </div>
+
+{% endblock %}
