@@ -16,6 +16,7 @@ from Models.FDataBase import FDataBase
 from Models.FDataBase_Task import Contest_SQL
 from Models.Forms import LoginForm, RegisterForm
 from Models.UserLogin import UserLogin
+import urllib3
 
 # Config
 DATABASE = '/tmp/db/database.db'  # Дата база
@@ -25,6 +26,9 @@ SECRET_KEY = '5PAy8Kzr-cyMTeYAYPDL97ZUrBDpNcMhFQ2k_am_G0XHHcN9O7i0GTCKuz83k' \
 application = Flask(__name__, subdomain_matching=True,
                     static_url_path='/WEB/static', static_folder='../WEB/static',
                     template_folder=os.path.abspath('../WEB/templates'))
+api = Flask(__name__, subdomain_matching=True,
+            static_url_path='/API/static', static_folder='../API/static',
+            template_folder=os.path.abspath('../API/templates'))
 application.config.from_object(__name__)  # load configuration
 application.config.update(dict(DATABASE=os.path.join(application.root_path, 'database.db')))  # переопределине пути к БД
 application.config['MAX_CONTENT_LENGTH'] = 2048 * 2048
@@ -40,7 +44,6 @@ compiler = {'python3': 'Python 3.10', 'pypy3': 'Pypy 3.9', 'gcc': 'GCC C 12.2',
             'gnu20': 'GNU C++ 20', 'java17': 'Java 17', 'js9': 'JavaScript 9', 'freepascal': 'Free Pascal 3.0.4'}
 url_ = 'https://ca90-79-139-157-192.eu.ngrok.io'  # https://statistics-online.ru | https://localhost:5000
 url_server = 'https://f28e-79-139-157-192.eu.ngrok.io'  # https://server.statistics-online.ru | https://localhost:5001
-import urllib3
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
@@ -775,6 +778,11 @@ def testing():
                       indent=4,
                       ensure_ascii=False,
                       separators=(',', ': '))
+
+
+@application.route("/Authorization", subdomain="api", methods=['GET', 'POST'])
+def authorization():
+    return "ok"
 
 
 if __name__ == '__main__':
