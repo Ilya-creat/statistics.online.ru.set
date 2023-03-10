@@ -1,6 +1,7 @@
 import json
 import os
 import sqlite3
+import threading
 from ast import literal_eval
 from datetime import datetime
 
@@ -12,23 +13,19 @@ from flask_ckeditor import CKEditor
 from flask_login import LoginManager, login_user, login_required, logout_user, current_user
 from werkzeug.security import generate_password_hash, check_password_hash
 
-from Models.FDataBase import FDataBase
-from Models.FDataBase_Task import Contest_SQL
-from Models.Forms import LoginForm, RegisterForm
-from Models.UserLogin import UserLogin
+from BACKEND.Models.FDataBase import FDataBase
+from BACKEND.Models.FDataBase_Task import Contest_SQL
+from BACKEND.Models.Forms import LoginForm, RegisterForm
+from BACKEND.Models.UserLogin import UserLogin
 import urllib3
 
 # Config
-DATABASE = '/tmp/db/database.db'  # Дата база
 DEBUG = False
 SECRET_KEY = '5PAy8Kzr-cyMTeYAYPDL97ZUrBDpNcMhFQ2k_am_G0XHHcN9O7i0GTCKuz83k' \
              'STFGUCEtcLBacUchaQbps5UmrGei5foFuKWIc4UUqbL4PyOz473BrJhdGw16CEFymABLm5Ezw'
 application = Flask(__name__, subdomain_matching=True,
-                    static_url_path='/WEB/static', static_folder='../WEB/static',
-                    template_folder=os.path.abspath('../WEB/templates'))
-api = Flask(__name__, subdomain_matching=True,
-            static_url_path='/API/static', static_folder='../API/static',
-            template_folder=os.path.abspath('../API/templates'))
+                    static_folder='../WEB/static',
+                    template_folder='../WEB/templates')
 application.config.from_object(__name__)  # load configuration
 application.config.update(dict(DATABASE=os.path.join(application.root_path, 'database.db')))  # переопределине пути к БД
 application.config['MAX_CONTENT_LENGTH'] = 2048 * 2048
@@ -714,27 +711,9 @@ def example_ok():
            '</form>'
 
 
-@application.route("/api-v.1.0/testing", methods=['GET', 'POST'])
-@login_required
+@application.route("/api-v.1.0/testing", methods=['GET', 'POST'], subdomain='practice')
 def proxy_example():
-    try:
-        if requests.head('http://statistics-server.ru:5001/api-v.1.0').status_code == 200:
-            url = 'http://statistics-server.ru:5001/api-v.1.0/testing'
-            files = request.files['file']
-            files.save(os.path.join(uploads_dir, files.filename))
-            POST_FILES = {
-                'file': open(os.path.join(uploads_dir, files.filename), "rb")
-            }
-            resp = requests.post(url, files=POST_FILES)
-            if resp.status_code == 200:
-                flash(f'Вердикт: Отправлено на тестирование!', category='info')
-                return redirect('/')
-            else:
-                flash(f'Вердикт: Произошла ошибка :(', category='info')
-                return redirect('/')
-    except:
-        flash('В нынешний момент сервер недоступен!', category='warning')
-        return redirect('/')
+    print(1)
 
 
 """===============ABORT()==============="""
@@ -780,11 +759,5 @@ def testing():
                       separators=(',', ': '))
 
 
-@application.route("/Authorization", subdomain="api", methods=['GET', 'POST'])
-def authorization():
-    return "ok"
-
-
 if __name__ == '__main__':
-    # app.run(host='statistics-online.ru', port=5000)
-    application.run(host='0.0.0.0')
+    application.run(host='localhost', port=5000, debug=False, threaded=True)

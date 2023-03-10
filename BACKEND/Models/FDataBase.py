@@ -29,10 +29,10 @@ class FDataBase:
         try:
             self.__cur.execute(f"SELECT COUNT() as `count` FROM lk WHERE user_email LIKE '{email}'")
             if self.__cur.fetchone()['count'] > 0:
-                print('Пользователь с таким email уже существует. . .')
+                # print('Пользователь с таким email уже существует. . .')
                 return False
             tm = datetime.datetime.now(pytz.timezone('Europe/Moscow'))
-            self.__cur.execute("INSERT INTO lk VALUES(NULL, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, NULL)",
+            self.__cur.execute("INSERT INTO lk VALUES(NULL, ?, ?, ?, ?, NULL, ?, ?, ?, ?, ?, ?, NULL)",
                                (name, surname, email, login, hpsw, tm.strftime("%Y-%m-%d %H.%M.%S"), 'Участник', 0, 0,
                                 False))
             self.__db.commit()
@@ -63,10 +63,34 @@ class FDataBase:
 
     def getUserByEmail(self, email):
         try:
-            self.__cur.execute(f"SELECT * FROM lk WHERE user_email = '{email}' LIMIT 1")
+            self.__cur.execute(f"SELECT * FROM lk WHERE user_email = ? LIMIT 1", (email, ))
             res = self.__cur.fetchone()
             if not res:
-                print("Пользователь не найден")
+                # print("Пользователь не найден")
+                return False
+
+            return res
+        except sqlite3.Error as e:
+            print("Ошибка получения данных из БД:\n" + str(e))
+        return False
+
+    def getUserByLogin(self, login):
+        try:
+            res = self.__cur.execute(f"SELECT * FROM lk WHERE user_login = ? LIMIT 1", (login, )).fetchone()
+            if not res:
+                # print("Пользователь не найден")
+                return False
+            return res
+        except sqlite3.Error as e:
+            print("Ошибка получения данных из БД:\n" + str(e))
+        return False
+
+    def getUserByTelephone(self, telephone):
+        try:
+            self.__cur.execute(f"SELECT * FROM lk WHERE user_num = ? LIMIT 1", (telephone, ))
+            res = self.__cur.fetchone()
+            if not res:
+                # print("Пользователь не найден")
                 return False
 
             return res
