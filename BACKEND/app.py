@@ -39,8 +39,8 @@ ckeditor = CKEditor(application)
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif', 'csv'}
 compiler = {'python3': 'Python 3.10', 'pypy3': 'Pypy 3.9', 'gcc': 'GCC C 12.2',
             'gnu20': 'GNU C++ 20', 'java17': 'Java 17', 'js9': 'JavaScript 9', 'freepascal': 'Free Pascal 3.0.4'}
-url_ = 'https://ca90-79-139-157-192.eu.ngrok.io'  # https://statistics-online.ru | https://localhost:5000
-url_server = 'https://f28e-79-139-157-192.eu.ngrok.io'  # https://server.statistics-online.ru | https://localhost:5001
+url_ = 'https://5e9c-109-252-210-250.ngrok-free.app'  # https://statistics-online.ru | https://localhost:5000
+url_server = 'http://sjudge.ru'  # https://server.statistics-online.ru | https://localhost:5001
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
@@ -721,32 +721,17 @@ def proxy_example():
 
 @application.errorhandler(400)
 def page_not_found(e):
-    return render_template('errors_pages/error_base.html',
-                           number_error='400',
-                           number_error_len=3,
-                           text_problem='Bad Request',
-                           title="Statistics.Error",
-                           _list_={'На главную': '/'}), 400
+    return render_template('errors/bad_methods.html')
 
 
 @application.errorhandler(404)
 def page_not_found(e):
-    return render_template('errors_pages/error_base.html',
-                           number_error='404',
-                           number_error_len=3,
-                           text_problem='Not Found («не найдено»)',
-                           title="Statistics.Error",
-                           _list_={'На главную': '/'}), 404
+    return render_template('errors/not_found.html')
 
 
 @application.errorhandler(500)
 def page_not_found(e):
-    return render_template('errors_pages/error_base.html',
-                           number_error='500',
-                           number_error_len=3,
-                           text_problem='Internal Server Error («внутренняя ошибка сервера»)',
-                           _list_={'На главную': '/'},
-                           title="Statistics.Error"), 500
+    return render_template('errors/interval_server.html')
 
 
 @application.route('/testing')
