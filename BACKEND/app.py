@@ -39,10 +39,11 @@ ckeditor = CKEditor(application)
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif', 'csv'}
 compiler = {'python3': 'Python 3.10', 'pypy3': 'Pypy 3.9', 'gcc': 'GCC C 12.2',
             'gnu20': 'GNU C++ 20', 'java17': 'Java 17', 'js9': 'JavaScript 9', 'freepascal': 'Free Pascal 3.0.4'}
-url_ = 'https://5e9c-109-252-210-250.ngrok-free.app'  # https://statistics-online.ru | https://localhost:5000
+url_ = 'http://online.sjudge.ru'  # https://statistics-online.ru | https://localhost:5000
 url_server = 'http://sjudge.ru'  # https://server.statistics-online.ru | https://localhost:5001
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+path = "/var/www/statistics_online/"
 
 
 ##################################################################################################
@@ -185,7 +186,8 @@ def main():
                                list_task=task_list,
                                posts=dbase.getPostsAnonce(10),
                                warn=warn,
-                               MSKTIME=datetime.now(pytz.timezone('Europe/Moscow')).strftime('%H:%M:%S'))
+                               MSKTIME=datetime.now(pytz.timezone('Europe/Moscow')).strftime('%H:%M:%S'),
+                               url_=url_)
     return render_template('main.html',
                            header="Statistics.Online",
                            text_button="Приступим",
@@ -743,6 +745,6 @@ def testing():
                       ensure_ascii=False,
                       separators=(',', ': '))
 
-
+print(os.getcwd())
 if __name__ == '__main__':
     application.run(host='localhost', port=5000, debug=False, threaded=True)

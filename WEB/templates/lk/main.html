@@ -79,7 +79,7 @@
                                                 $this.html(event.strftime('<strong><span>До начала: %H:%M:%S</span></strong>'));
                                         }).on('finish.countdown', function () {
                                             var UserHref = confirm("Перейти в панель участника?");
-                                            if (UserHref) $(location).prop('href', 'https://9b44-79-139-144-49.eu.ngrok.io{{ contest_list_begin[elem] }}/problems');
+                                            if (UserHref) $(location).prop('href', '{{ url_ }}/contest/{{ contest_list_begin[elem] }}/problems');
                                         });
                                     });
                                 });

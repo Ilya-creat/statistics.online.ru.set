@@ -33,7 +33,7 @@ db = None
 if 'API' in os.getcwd():
     db = sqlite3.Connection(f"{os.getcwd()}/../database.db", check_same_thread=False)
 else:
-    db = sqlite3.Connection(f"{os.getcwd()}/BACKEND/database.db", check_same_thread=False)
+    db = sqlite3.Connection(f"/var/www/statistics_online/BACKEND/database.db", check_same_thread=False)
 db.row_factory = sqlite3.Row
 global_sql = SQL(db)
 
